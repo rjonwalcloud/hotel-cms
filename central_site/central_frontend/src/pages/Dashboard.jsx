@@ -130,10 +130,11 @@ const Dashboard = () => {
                             <thead>
                                 <tr className="text-[#52525b] text-sm border-b border-[#2d2d30]">
                                     <th className="px-6 py-4 font-medium">Hotel / ID</th>
+                                    <th className="px-6 py-4 font-medium">Contact / Tax</th>
+                                    <th className="px-6 py-4 font-medium">Location</th>
                                     <th className="px-6 py-4 font-medium">Network Details</th>
-                                    <th className="px-6 py-4 font-medium">Last Ping</th>
                                     <th className="px-6 py-4 font-medium">Status</th>
-                                    <th className="px-6 py-4 font-medium">Action</th>
+                                    <th className="px-6 py-4 font-medium text-right">Action</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-[#2d2d30]">
@@ -142,6 +143,23 @@ const Dashboard = () => {
                                         <td className="px-6 py-4">
                                             <div className="font-medium text-white">{d.hotel_name || 'Generic Deploy'}</div>
                                             <div className="text-xs text-[#52525b] mt-1 font-mono uppercase">{d.hotel_id}</div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className="text-sm space-y-1">
+                                                {d.email && <div className="flex items-center gap-2 text-[#a1a1aa] hover:text-blue-400 transition-colors cursor-default">
+                                                    <span className="text-xs">{d.email}</span>
+                                                </div>}
+                                                {d.phone && <div className="text-xs text-[#52525b]">{d.phone}</div>}
+                                                {d.gst_number && <div className="text-[10px] bg-blue-500/10 text-blue-400 px-1.5 py-0.5 rounded inline-block border border-blue-500/20">GST: {d.gst_number}</div>}
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            <div className="text-sm text-[#a1a1aa] line-clamp-1 max-w-[200px]" title={d.address}>
+                                                {d.address || 'No Address Provided'}
+                                            </div>
+                                            <div className="text-xs text-[#52525b] mt-1">
+                                                {[d.city, d.state, d.country].filter(Boolean).join(', ') || 'Global'}
+                                            </div>
                                         </td>
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-2 text-sm">
@@ -154,28 +172,28 @@ const Dashboard = () => {
                                                     rel="noopener noreferrer"
                                                     className="text-xs text-[#52525b] hover:text-blue-400 mt-1 flex items-center gap-1 transition-colors"
                                                 >
-                                                    {d.public_url}
+                                                    Dashboard Link
                                                     <ExternalLink size={10} />
                                                 </a>
                                             )}
-                                        </td>
-                                        <td className="px-6 py-4 text-sm text-[#a1a1aa]">
-                                            {new Date(d.last_seen).toLocaleString()}
+                                            <div className="text-[10px] text-[#3f3f46] mt-1">
+                                                Seen: {new Date(d.last_seen).toLocaleString()}
+                                            </div>
                                         </td>
                                         <td className="px-6 py-4">
                                             <span className={`px-3 py-1 rounded-full text-xs font-medium border ${d.status === 'AUTHORIZED'
-                                                    ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
-                                                    : 'bg-red-500/10 border-red-500/20 text-red-400'
+                                                ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
+                                                : 'bg-red-500/10 border-red-500/20 text-red-400'
                                                 }`}>
                                                 {d.status}
                                             </span>
                                         </td>
-                                        <td className="px-6 py-4">
+                                        <td className="px-6 py-4 text-right">
                                             <button
                                                 onClick={() => toggleStatus(d.id, d.status)}
                                                 className={`p-2 rounded-lg transition-all ${d.status === 'AUTHORIZED'
-                                                        ? 'text-[#52525b] hover:text-red-400 hover:bg-red-500/10'
-                                                        : 'text-red-400 hover:text-emerald-400 hover:bg-emerald-500/10'
+                                                    ? 'text-[#52525b] hover:text-red-400 hover:bg-red-500/10'
+                                                    : 'text-red-400 hover:text-emerald-400 hover:bg-emerald-500/10'
                                                     }`}
                                                 title={d.status === 'AUTHORIZED' ? 'Mark Unauthorized' : 'Authorize'}
                                             >

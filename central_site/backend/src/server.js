@@ -48,7 +48,7 @@ app.post('/api/report', (req, res) => {
 
         // Decode from Base64
         const decoded = JSON.parse(Buffer.from(data, 'base64').toString());
-        const { ip, publicUrl, hotelName, hotelId, details } = decoded;
+        const { ip, publicUrl, hotelName, hotelId, address, city, state, country, phone, email, gst_number, details } = decoded;
 
         if (!ip || !hotelId) return res.status(400).json({ message: 'Missing required fields' });
 
@@ -56,14 +56,14 @@ app.post('/api/report', (req, res) => {
             if (row) {
                 // Update existing
                 db.run(
-                    "UPDATE deployments SET last_seen = CURRENT_TIMESTAMP, public_url = ?, hotel_name = ?, details = ? WHERE id = ?",
-                    [publicUrl, hotelName, JSON.stringify(details), row.id]
+                    "UPDATE deployments SET last_seen = CURRENT_TIMESTAMP, public_url = ?, hotel_name = ?, address = ?, city = ?, state = ?, country = ?, phone = ?, email = ?, gst_number = ?, details = ? WHERE id = ?",
+                    [publicUrl, hotelName, address, city, state, country, phone, email, gst_number, JSON.stringify(details), row.id]
                 );
             } else {
                 // Insert new
                 db.run(
-                    "INSERT INTO deployments (ip, public_url, hotel_name, hotel_id, details) VALUES (?, ?, ?, ?, ?)",
-                    [ip, publicUrl, hotelName, hotelId, JSON.stringify(details)]
+                    "INSERT INTO deployments (ip, public_url, hotel_name, hotel_id, address, city, state, country, phone, email, gst_number, details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                    [ip, publicUrl, hotelName, hotelId, address, city, state, country, phone, email, gst_number, JSON.stringify(details)]
                 );
             }
         });
