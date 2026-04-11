@@ -1,0 +1,1150 @@
+{
+  "common": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "logout": "Logout",
+    "settings": "Settings",
+    "notifications": "Notifications",
+    "language": "Language",
+    "search": "Search...",
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "actions": "Actions",
+    "refresh": "Refresh",
+    "refreshing": "Refreshing...",
+    "sync_inventory": "Sync Inventory (30 Days)",
+    "syncing": "Syncing...",
+    "download_report": "Download Report",
+    "view_all": "View All",
+    "add": "Add",
+    "update": "Update",
+    "create": "Create",
+    "select": "Select",
+    "activate": "Activate",
+    "none": "None",
+    "unassigned": "Unassigned",
+    "active": "Active",
+    "inactive": "Inactive",
+    "status": "Status",
+    "copied": "Copied!",
+    "prompt": "Prompt",
+    "reason_required": "Reason is required",
+    "reason_placeholder": "Enter reason here...",
+    "close": "Close",
+    "error": "Error",
+    "deactivate": "Deactivate",
+    "refresh_success": "Refresh successful",
+    "error_loading": "Error loading data",
+    "required": "Required",
+    "reset": "Reset",
+    "saving": "Saving...",
+    "deleted": "Deleted",
+    "error_delete": "Error deleting item",
+    "update_success": "Updated successfully",
+    "mark_all_read": "Mark all as read",
+    "no_notifications": "No new notifications",
+    "view_all_sr": "View All Service Requests",
+    "save_changes": "Save Changes",
+    "reset_changes": "Reset Changes"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "hotels": "Hotels",
+    "subscriptions": "Subscriptions",
+    "quotas": "Quotas",
+    "audit": "Audit Logs",
+    "system": "System Backup",
+    "settings": "Settings",
+    "users": "Users",
+    "analytics": "Analytics",
+    "menu_visibility": "Menu Visibility",
+    "rooms": "Rooms",
+    "room_calendar": "Room Inventory",
+    "item_inventory": "Item Inventory",
+    "stock_mgmt": "Stocks",
+    "procurement": "Supplies & POs",
+    "breakage_loss": "Breakage & Loss",
+    "expenses": "Expenses",
+    "report_breakage": "Report Breakage",
+    "room_types": "Room Types",
+    "amenities": "Amenities",
+    "room_addons": "Room Addons",
+    "bookings": "Bookings",
+    "bulk_bookings": "Bulk Bookings",
+    "customers": "Customers",
+    "booking_manager": "Booking Manager",
+    "qr_codes": "QR Codes",
+    "services": "Services",
+    "service_requests": "Service Requests",
+    "rates": "Rate Management",
+    "promotions": "Promotions",
+    "tax_currency": "Tax & Currency",
+    "tasks": "Tasks",
+    "invoices": "Invoices",
+    "pos_restaurant": "Restaurant POS",
+    "inventory_items": "Items",
+    "purchase_orders": "Purchase Orders",
+    "suppliers": "Suppliers",
+    "categories": "Categories",
+    "stores": "Stores",
+    "lost_found": "Lost & Found",
+    "support": "Support"
+  },
+  "pos": {
+    "title": "Restaurant POS",
+    "ticket": "Ticket",
+    "all_delicacies": "All Delicacies",
+    "find_items": "Find delicious items...",
+    "no_items": "No dishes found matching your search",
+    "current_order": "Current Order",
+    "order_empty": "Order is empty",
+    "guest_assignment": "Guest Assignment",
+    "search_room_guest": "Search Room / Guest Name...",
+    "post_to_room": "Post to Room",
+    "pay_now": "Pay Now",
+    "cash": "CASH",
+    "card": "CARD",
+    "upi": "UPI",
+    "place_order": "PLACE ORDER",
+    "order_success": "Order placed successfully!",
+    "order_error": "Failed to place order",
+    "walk_in": "Walk-in",
+    "walkin_guest": "Walk-in Guest",
+    "guest_name": "Guest Name",
+    "guest_phone": "Guest Phone (Optional)"
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "monitoring": "Monitoring your hotel's pulse in real-time",
+    "executive_dashboard": "Executive Dashboard",
+    "loading": "Loading dashboard...",
+    "no_hotel": "No hotel assigned to your account",
+    "subscription": {
+      "current_plan": "Current Plan",
+      "days_left": "{{count}} Days Left",
+      "expired": "Expired",
+      "room_limit": "Room Limit",
+      "monthly_bookings": "Monthly Bookings",
+      "expiring_soon": "Subscription expiring soon. Please renew to avoid service interruption.",
+      "no_active": "No Active Subscription",
+      "restricted": "Your hotel does not have an active subscription plan. Operations are restricted. Please contact support to activate a plan and unlock full functionality.",
+      "contact_support": "Contact Support",
+      "view_plans": "View Plans"
+    },
+    "stats": {
+      "inventory": "Inventory",
+      "availability": "Availability",
+      "reservations": "Reservations",
+      "revenue": "Revenue",
+      "vs_last_month": "vs last month",
+      "this_week": "this week"
+    },
+    "service_requests": {
+      "title": "Service Requests Pulse",
+      "live_updates": "Live Updates",
+      "incoming": "Incoming",
+      "accepted": "Accepted",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "new": "New",
+      "queued": "Queued",
+      "active": "Active",
+      "done": "Done"
+    },
+    "analytics": {
+      "capacity": "Capacity Analytics",
+      "occupancy": "Occupancy",
+      "occupied": "Occupied",
+      "vacant": "Vacant"
+    },
+    "activity": {
+      "recent": "Recent Activity",
+      "no_activity": "No activity recorded today"
+    }
+  },
+  "rooms": {
+    "title": "Room Management",
+    "subtitle": "Manage your hotel rooms",
+    "room": "Room",
+    "add_room": "Add Room",
+    "edit_room": "Edit Room",
+    "refresh_list": "Refresh List",
+    "room_number": "Room Number",
+    "floor": "Floor",
+    "room_type": "Room Type",
+    "base_price": "Base Price",
+    "status": {
+      "label": "Status",
+      "available": "Available",
+      "occupied": "Occupied",
+      "maintenance": "Maintenance",
+      "blocked": "Blocked"
+    },
+    "legend": {
+      "available": "Available",
+      "occupied": "Occupied",
+      "maintenance": "Maintenance",
+      "blocked": "Blocked"
+    },
+    "floor_label": "Floor {{floor}}",
+    "unassigned_floor": "Unassigned Floor",
+    "no_rooms": "No rooms found. Add some rooms to see the layout.",
+    "sync_success": "Inventory synced successfully for 1 year",
+    "delete_confirm": "Delete room {{number}}?",
+    "delete_title": "Delete Room"
+  },
+  "room_types": {
+    "title": "Room Type Management",
+    "subtitle": "Define categories like Deluxe, Standard, etc.",
+    "add_type": "Add Room Type",
+    "edit_type": "Edit Room Type",
+    "delete_title": "Delete Room Type",
+    "delete_confirm": "Delete room type \"{{name}}\"?",
+    "name": "Type Name",
+    "short_code": "Identifier (Tag/Emoji)",
+    "description": "Description",
+    "base_price": "Base Price",
+    "max_occupancy": "Max Capacity",
+    "amenities": "Amenities",
+    "no_amenities": "No amenities defined. Add them from the Amenities Menu."
+  },
+  "promotions": {
+    "title": "Promotions & Coupons",
+    "subtitle": "Manage discounts, offers, and coupon codes",
+    "tabs": {
+      "promotions": "Promotions",
+      "coupons": "Coupon Codes"
+    },
+    "promo": {
+      "title": "Auto-Apply Promotions & Offers",
+      "new": "New Promotion",
+      "edit": "Edit Promotion",
+      "delete_confirm": "Delete this promotion?",
+      "name": "Promotion Name",
+      "auto_apply": "Auto-Apply",
+      "discount": "Discount",
+      "valid_period": "Valid Period",
+      "applies_to": "Applies To",
+      "all_types": "All Room Types",
+      "empty": "No promotions yet. Create your first offer!",
+      "eligible_bookings": "Auto-apply to eligible bookings"
+    },
+    "coupon": {
+      "title": "Coupon Codes",
+      "new": "New Coupon",
+      "edit": "Edit Coupon Code",
+      "delete_confirm": "Delete this coupon code?",
+      "code": "Coupon Code",
+      "usage": "Usage",
+      "max_uses": "Max Total Uses",
+      "unlimited": "Unlimited",
+      "empty": "No coupon codes. Create one to offer manual discounts."
+    },
+    "form": {
+      "discount_type": "Discount Type",
+      "discount_percentage": "Percentage (%)",
+      "discount_flat": "Flat Amount",
+      "discount_value": "Discount Value",
+      "max_discount": "Max Discount",
+      "cap_amount": "Cap amount",
+      "start_date": "Start Date",
+      "end_date": "End Date",
+      "min_nights": "Min Nights",
+      "min_booking_amount": "Min Booking Amount",
+      "applicable_room_types": "Applicable Room Types",
+      "per_booking_limit": "Per Booking Limit",
+      "internal_note": "Internal note",
+      "leave_empty_all": "Leave empty to apply to all room types"
+    }
+  },
+  "bookings": {
+    "title": "Booking Management",
+    "subtitle": "Manage reservations and check-ins",
+    "new_booking": "New Booking",
+    "search_guest": "Search Guest",
+    "search_placeholder": "Name or Phone...",
+    "status_filter": "Status",
+    "all_statuses": "All Statuses",
+    "date_range": "Date Range",
+    "all_time": "All Time",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "this_week": "This Week",
+    "last_30_days": "Last 30 Days",
+    "custom_range": "Custom Range",
+    "from": "From",
+    "to": "To",
+    "clear_filters": "Clear Filters",
+    "table": {
+      "pnr": "PNR",
+      "guest": "Guest",
+      "requirements": "Rooms/Requirements",
+      "check_in": "Check-in",
+      "check_out": "Check-out",
+      "amount": "Amount",
+      "status": "Status"
+    },
+    "status": {
+      "created": "Created",
+      "confirmed": "Confirmed",
+      "checked_in": "Checked In",
+      "checked_out": "Checked Out",
+      "no_show": "No Show",
+      "refunded": "Refunded",
+      "cancelled": "Cancelled"
+    },
+    "actions": {
+      "details": "Details",
+      "check_in": "Check In",
+      "check_out": "Check Out",
+      "invoice": "Invoice",
+      "cancel": "Cancel"
+    },
+    "modals": {
+      "create": {
+        "title": "Create Booking",
+        "room_type": "Room Type",
+        "select_category": "Select Category",
+        "quantity": "Quantity",
+        "adults": "Adults",
+        "children": "Children",
+        "check_in": "Check-in Date",
+        "check_out": "Check-out Date",
+        "room_addons": "Room Addons",
+        "no_addons": "No active addons available.",
+        "guest_name": "Guest Name",
+        "guest_email": "Email",
+        "guest_phone": "Phone",
+        "submit": "Create Booking"
+      },
+      "check_in": {
+        "title": "Check-In: Guest Details",
+        "assign_rooms": "Assign Rooms",
+        "select_room": "Select Room",
+        "guest_label": "Guest {{index}}",
+        "full_name": "Full Name",
+        "full_name_placeholder": "Full name as per ID",
+        "age": "Age",
+        "id_proof_type": "ID Proof Type",
+        "id_proof_number": "ID Proof Number",
+        "id_number_placeholder": "Enter ID number",
+        "submit": "Complete Check-In"
+      },
+      "check_out": {
+        "title": "Check-Out & Billing",
+        "extra_charges_title": "Room Service & Extra Charges",
+        "charge_desc_placeholder": "Description (e.g. Room Service)",
+        "add_charge": "Add Charge",
+        "apply_coupon": "Apply Coupon Code",
+        "coupon_placeholder": "Enter coupon code",
+        "coupon_applied": "Coupon applied",
+        "preview_bill": "Preview Bill",
+        "finalize": "Finalize Check-Out",
+        "print": "Print Invoice",
+        "print_invoice": "Print Invoice",
+        "back": "Back to Billing",
+        "settle_title": "Settle Payment",
+        "settle_description": "Select the payment method to finalize this invoice.",
+        "settle_button": "Settle Payment for {{amount}}",
+        "payment_status": "Payment Status",
+        "paid": "PAID",
+        "not_paid": "NOT PAID",
+        "via": "via",
+        "back_to_edit": "Back to Edit",
+        "close": "Close"
+      },
+      "timeline": {
+        "title": "Booking Details & Timeline",
+        "guest": "Guest",
+        "no_email": "No email provided",
+        "reference": "Reference (PNR)",
+        "stay_details": "Stay Details",
+        "occupancy": "Occupancy",
+        "adult_single": "Adult",
+        "adult_plural": "Adults",
+        "child_single": "Child",
+        "child_plural": "Children",
+        "guests_total": "{{count}} Guests Total",
+        "audit_trail": "Audit Trail & Timeline",
+        "no_events": "No timeline events recorded.",
+        "action_by": "Action by: {{actor}}"
+      }
+    },
+    "billing": {
+      "invoice": "INVOICE",
+      "date": "Date",
+      "guest_name": "Guest Name",
+      "occupancy": "Occupancy",
+      "rooms": "Room(s)",
+      "duration": "Duration",
+      "nights": "{{count}} Night(s)",
+      "description": "Description",
+      "amount": "Amount",
+      "room_charges": "Room Charges ({{count}} nights)",
+      "rate_discount": "Rate discount",
+      "coupon_discount": "Coupon Discount",
+      "room_addons_title": "Room Addons",
+      "extra_charges_title": "Extra Charges",
+      "manual_service": "Manual Service",
+      "room_service_title": "Room Service (QR Orders)",
+      "grand_total": "Grand Total",
+      "thank_you": "Thank you for staying with us!"
+    },
+    "messages": {
+      "loading": "Loading bookings...",
+      "no_hotel": "No hotel assigned",
+      "assign_all_rooms": "Please assign a specific room for all requested spots",
+      "confirm_check_in": "Complete Check-in",
+      "confirm_check_in_msg": "Are you sure you want to complete check-in for these guests?",
+      "check_in_success": "Guest checked in!",
+      "check_out_success": "Guest checked out!",
+      "bill_calculated": "Bill calculated!",
+      "confirm_check_out": "Finalize Check-out",
+      "confirm_check_out_msg": "Are you sure you want to finalize billing and check out this guest? This will generate the final invoice.",
+      "checkout_blocked": "Checkout Blocked",
+      "booking_cancelled": "Booking cancelled",
+      "cancel_confirm_title": "Cancel Booking",
+      "cancel_confirm_msg": "Enter cancellation reason:",
+      "not_found": "Booking not found."
+    }
+  },
+  "service_requests": {
+    "title": "Service Requests",
+    "subtitle": "Manage and fulfill live room service orders",
+    "refresh_list": "Refresh List",
+    "stats": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "status": {
+      "pending": "Pending",
+      "accepted": "Accepted",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "table": {
+      "room_info": "Room Info",
+      "order_details": "Order Details",
+      "guest_contact": "Guest Contact",
+      "status": "Status",
+      "timeline": "Timeline",
+      "actions": "Actions"
+    },
+    "actions": {
+      "details": "Details",
+      "review": "Review Order",
+      "reject_all": "Reject All",
+      "start_prep": "Start Preparation",
+      "mark_complete": "Mark Complete",
+      "cancel_active": "Cancel Active",
+      "invoice": "Invoice"
+    },
+    "modals": {
+      "review": {
+        "title": "Review Order",
+        "fulfillment_check": "Partial Fulfillment Check",
+        "verify_msg": "Verify each item on this order. If an item is out of stock or unavailable, uncheck it to mark it as Rejected.",
+        "confirm": "Confirm Order"
+      },
+      "details": {
+        "title": "Order Details & History",
+        "room": "Room",
+        "guest": "Guest",
+        "items": "Order Items",
+        "timeline_root": "Timeline (Root Item)",
+        "no_history": "No history recorded yet."
+      },
+      "invoice": {
+        "title": "Service Request Invoice",
+        "receipt": "SERVICE RECEIPT",
+        "order_ref": "Order Ref",
+        "total_items": "Total Items",
+        "description": "Description",
+        "qty": "Qty",
+        "unit_price": "Unit Price",
+        "total": "Total",
+        "subtotal": "Subtotal",
+        "grand_total": "Grand Total",
+        "thank_you": "Thank you for your order!",
+        "print": "Print Receipt",
+        "payment_status": "Payment Status",
+        "status_paid_booking": "Paid (By Booking)",
+        "status_paid_pos": "Paid (POS)",
+        "status_unpaid": "Unpaid",
+        "payment_method": "Payment Method"
+      }
+    },
+    "messages": {
+      "loading": "Loading requests...",
+      "load_error": "Failed to load service requests",
+      "update_success": "Order marked as {{status}}",
+      "update_error": "Failed to update order status",
+      "review_success": "Order reviewed and processed successfully",
+      "review_error": "Failed to process order review",
+      "details_error": "Failed to load request details",
+      "no_orders": "No active orders",
+      "waiting_msg": "Ready and waiting! Orders will appear here as soon as guests scan their room QR codes."
+    }
+  },
+  "currency_tax": {
+    "title": "Tax & Currency Settings",
+    "subtitle": "Manage your billing currency and hotel taxes",
+    "currency_setup": "Currency Setup",
+    "currency_code": "Currency Code",
+    "currency_code_placeholder": "e.g. USD, EUR, INR",
+    "currency_symbol": "Currency Symbol",
+    "currency_symbol_placeholder": "e.g. $, €, ₹",
+    "currency_symbol_help": "This symbol will replace $ across all pages and invoices.",
+    "save_currency": "Save Currency",
+    "saving": "Saving...",
+    "payment_details": "Payment Details",
+    "upi_id": "UPI ID",
+    "bank_name": "Bank Name",
+    "account_number": "Account Number",
+    "ifsc_code": "IFSC Code",
+    "save_payment": "Save Payment Details",
+    "billing_taxes": "Billing Taxes",
+    "billing_taxes_subtitle": "Taxes are applied automatically at checkout.",
+    "add_tax": "Add Tax",
+    "table": {
+      "tax_details": "Tax Details",
+      "type": "Type",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "tax_types": {
+      "inclusive": "Inclusive",
+      "exclusive": "Exclusive"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "activated": "Tax activated",
+      "deactivated": "Tax deactivated"
+    },
+    "messages": {
+      "loading": "Loading settings...",
+      "load_error": "Failed to load settings data",
+      "save_success": "Currency settings saved successfully",
+      "save_error": "Failed to save currency settings",
+      "tax_update_success": "Tax updated successfully",
+      "tax_create_success": "Tax created successfully",
+      "tax_save_error": "Failed to save tax details",
+      "tax_delete_confirm": "Are you sure you want to delete this tax?",
+      "tax_delete_success": "Tax deleted successfully",
+      "tax_delete_error": "Failed to delete tax",
+      "tax_status_error": "Failed to update tax status",
+      "no_taxes": "No taxes configured yet.",
+      "create_first": "Create your first tax"
+    },
+    "modals": {
+      "edit_title": "Edit Tax Definition",
+      "create_title": "Create New Tax",
+      "tax_name": "Tax Name",
+      "tax_name_placeholder": "e.g. state GST, VAT",
+      "category": "Category",
+      "rate": "Rate (%)",
+      "rate_placeholder": "e.g. 18",
+      "inclusive_tax": "Inclusive Tax",
+      "inclusive_help": "The base price of the item already includes this tax. The system will calculate the subtotal visually backwards during checkout.",
+      "exclusive_help": "The tax rate will be added on top of the base price during checkout.",
+      "save_tax": "Save Tax"
+    }
+  },
+  "rates": {
+    "title": "Rate Management",
+    "subtitle": "Configure seasonal pricing and rate plans",
+    "refresh": "Refresh",
+    "tabs": {
+      "plans": "Rate Plans",
+      "rules": "Rate Rules"
+    },
+    "plans": {
+      "title": "Rate Plans",
+      "new": "New Plan",
+      "empty": "No rate plans yet. Create your first one!",
+      "table": {
+        "name": "Plan Name",
+        "description": "Description",
+        "rules": "Rules",
+        "priority": "Priority",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "rules": {
+      "title": "Rate Rules (Seasonal Pricing)",
+      "new": "New Rule",
+      "empty": "No rate rules. Add rules to override base prices for date ranges.",
+      "plan_required": "Create a Rate Plan first before adding rules.",
+      "table": {
+        "name": "Rule Name",
+        "plan": "Rate Plan",
+        "room_type": "Room Type",
+        "dates": "Date Range",
+        "price": "Price",
+        "type": "Type",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "status": {
+      "default": "Default",
+      "active": "Active",
+      "inactive": "Inactive",
+      "inactive_plan_off": "Inactive (Plan Off)"
+    },
+    "adj_types": {
+      "fixed": "Fixed Price",
+      "percent_inc": "% Increase",
+      "percent_dec": "% Decrease"
+    },
+    "modals": {
+      "plan": {
+        "edit": "Edit Rate Plan",
+        "create": "New Rate Plan",
+        "name": "Plan Name *",
+        "name_placeholder": "e.g. Peak Season, Weekend Special",
+        "description": "Description",
+        "description_placeholder": "Optional description",
+        "priority": "Priority",
+        "priority_help": "Higher priority rules take precedence",
+        "is_default": "Default Plan",
+        "is_active": "Active",
+        "save_create": "Create Plan",
+        "save_update": "Update Plan"
+      },
+      "rule": {
+        "edit": "Edit Rate Rule",
+        "create": "New Rate Rule",
+        "plan": "Rate Plan *",
+        "plan_placeholder": "Select a Plan",
+        "plan_inactive_warning": "Warning: Selected plan is inactive. This rule will not apply.",
+        "room_type": "Room Type *",
+        "room_type_placeholder": "Select Room Type",
+        "name": "Rule Name",
+        "name_placeholder": "e.g. Christmas Rates, Summer Premium",
+        "start_date": "Start Date *",
+        "end_date": "End Date *",
+        "price": "Price Override *",
+        "price_placeholder": "Override price per night",
+        "adj_type": "Adjustment Type",
+        "min_nights": "Min Nights",
+        "is_active": "Active",
+        "save_create": "Create Rule",
+        "save_update": "Update Rule"
+      }
+    },
+    "messages": {
+      "load_error": "Failed to load rate data",
+      "name_required": "Name is required",
+      "plan_updated": "Rate plan updated",
+      "plan_created": "Rate plan created",
+      "plan_save_error": "Failed to save rate plan",
+      "plan_delete_confirm": "Delete this rate plan and all its rules?",
+      "plan_delete_success": "Rate plan deleted",
+      "plan_delete_error": "Failed to delete plan",
+      "fields_required": "All required fields must be filled",
+      "rule_updated": "Rate rule updated",
+      "rule_created": "Rate rule created",
+      "rule_save_error": "Failed to save rate rule",
+      "rule_delete_confirm": "Delete this rate rule?",
+      "rule_delete_success": "Rate rule deleted",
+      "rule_delete_error": "Failed to delete rule"
+    }
+  },
+  "booking_manager": {
+    "title": "Booking Manager",
+    "subtitle": "Manage external booking channels (OYO, Booking.com, etc.)",
+    "refresh": "Refresh List",
+    "add_channel": "Add Channel",
+    "add_booking": "Add Booking",
+    "stats": {
+      "active_channels": "Active Channels",
+      "total_bookings": "Total Bookings",
+      "total_revenue": "Total Revenue",
+      "commission_paid": "Commission Paid"
+    },
+    "tabs": {
+      "channels": "Channels",
+      "bookings": "Bookings",
+      "analytics": "Analytics"
+    },
+    "channels": {
+      "no_channels": "No channels configured",
+      "no_channels_help": "Add your first booking channel to get started",
+      "active": "Active",
+      "inactive": "Inactive",
+      "bookings": "Bookings",
+      "revenue": "Revenue",
+      "commission": "Commission",
+      "edit": "Edit",
+      "delete": "Delete",
+      "enable": "Enable",
+      "disable": "Disable",
+      "delete_title": "Delete Channel",
+      "delete_confirm": "Delete this channel?",
+      "add_title": "Add Channel",
+      "edit_title": "Edit Channel",
+      "form": {
+        "name": "Name",
+        "type": "Channel Type",
+        "api_key": "API Key",
+        "api_secret": "API Secret",
+        "property_id": "Property ID",
+        "commission_rate": "Commission Rate (%)",
+        "select_type": "Select Type"
+      }
+    },
+    "bookings": {
+      "no_bookings": "No channel bookings yet",
+      "table": {
+        "channel": "Channel",
+        "ext_id": "Ext. ID/PNR",
+        "guest": "Guest",
+        "checkin": "Check-in",
+        "checkout": "Check-out",
+        "amount": "Amount",
+        "status": "Status",
+        "actions": "Actions",
+        "commission": "Commission"
+      },
+      "add_title": "Add Channel Booking",
+      "form": {
+        "select_channel": "Select Channel",
+        "external_id": "External Booking ID",
+        "guest_name": "Guest Name",
+        "guest_email": "Guest Email",
+        "guest_phone": "Guest Phone",
+        "rooms": "Rooms",
+        "total_amount": "Total Amount",
+        "commission_amount": "Commission Amount"
+      },
+      "status": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "noshow": "No Show"
+      }
+    },
+    "analytics": {
+      "title": "Channel Performance",
+      "no_data": "No data available",
+      "table": {
+        "total": "Total",
+        "confirmed": "Confirmed",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      }
+    },
+    "messages": {
+      "load_error": "Failed to load data",
+      "channel_updated": "Channel updated",
+      "channel_created": "Channel created",
+      "booking_added": "Booking added",
+      "status_updated": "Status updated",
+      "delete_success": "Channel deleted",
+      "toggle_success": "Channel status updated"
+    }
+  },
+  "addons": {
+    "title": "Room Addons",
+    "subtitle": "Create optional addons for bookings (e.g., Airport Transfer, Extra Bed)",
+    "add_new": "Add New Addon",
+    "table": {
+      "name": "Addon Name",
+      "description": "Description",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "form": {
+      "name": "Name",
+      "name_placeholder": "e.g., Premium Airport Transfer",
+      "description": "Description",
+      "description_placeholder": "Detailed description...",
+      "price": "Price",
+      "price_placeholder": "e.g., 50.00",
+      "active": "Active (Available for booking)"
+    },
+    "modals": {
+      "create_title": "Create Addon",
+      "edit_title": "Edit Addon",
+      "delete_title": "Delete Addon",
+      "delete_confirm": "Are you sure you want to delete this addon?"
+    },
+    "messages": {
+      "load_error": "Failed to load addons",
+      "update_success": "Addon updated successfully",
+      "create_success": "Addon created successfully",
+      "delete_success": "Addon deleted successfully",
+      "toggle_error": "Failed to toggle status",
+      "delete_error": "Failed to delete addon"
+    }
+  },
+  "amenities": {
+    "title": "Amenity Management",
+    "subtitle": "Define available amenities for your rooms",
+    "refresh": "Refresh List",
+    "add_new": "Add Amenity",
+    "table": {
+      "icon": "Icon",
+      "name": "Name",
+      "description": "Description"
+    },
+    "form": {
+      "name": "Name",
+      "name_placeholder": "e.g. High-Speed WiFi",
+      "description": "Description",
+      "description_placeholder": "Add descriptive details...",
+      "icon": "Icon (Select or type emoji/tag)",
+      "icon_placeholder": "e.g. Wifi, 🏊‍♂️, Gym"
+    },
+    "modals": {
+      "create_title": "Add Amenity",
+      "edit_title": "Edit Amenity",
+      "delete_title": "Delete Amenity",
+      "delete_confirm": "Delete amenity \"{{name}}\"?"
+    },
+    "messages": {
+      "load_error": "Failed to load amenities",
+      "update_success": "Amenity updated!",
+      "create_success": "Amenity created!",
+      "delete_success": "Amenity deleted"
+    }
+  },
+  "settings": {
+    "title": "Hotel Settings",
+    "subtitle": "Manage your hotel information",
+    "form": {
+      "hotel_name": "Hotel Name",
+      "logo_url": "Logo URL",
+      "logo_placeholder": "https://example.com/logo.png",
+      "logo_hint": "Provide a direct link to your hotel logo image.",
+      "address": "Address",
+      "city": "City",
+      "state": "State",
+      "country": "Country",
+      "postal_code": "Postal Code",
+      "phone": "Phone",
+      "email": "Email",
+      "gst_number": "GST Number (for Invoices)",
+      "gst_placeholder": "e.g. 22AAAAA0000A1Z5"
+    },
+    "messages": {
+      "load_error": "Failed to load hotel data",
+      "update_success": "Hotel settings updated successfully!",
+      "update_error": "Failed to update settings"
+    },
+    "no_hotel": "No hotel assigned"
+  },
+  "tasks": {
+    "title": "Task Management",
+    "subtitle": "Create and assign tasks to staff members",
+    "refresh": "Refresh",
+    "automation": "Auto Tasks",
+    "automation_hint": "Generate tasks on checkout",
+    "create": "Create Task",
+    "stats": {
+      "pending": "Pending",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "table": {
+      "title": "Title",
+      "assigned_to": "Assigned To",
+      "priority": "Priority",
+      "status": "Status",
+      "due_date": "Due Date",
+      "details": "Details",
+      "view": "View",
+      "unassigned": "Unassigned"
+    },
+    "form": {
+      "title": "Title",
+      "title_placeholder": "e.g. Clean Room 101",
+      "description": "Description",
+      "description_placeholder": "Task details...",
+      "assign_to": "Assign To",
+      "priority": "Priority",
+      "due_date": "Due Date",
+      "status": "Status"
+    },
+    "modals": {
+      "create_title": "Create Task",
+      "edit_title": "Edit Task",
+      "details_title": "Task Details",
+      "history_title": "Task History Log",
+      "no_history": "No history recorded yet.",
+      "delete_title": "Delete Task",
+      "delete_confirm": "Are you sure you want to delete this task? This action cannot be undone."
+    },
+    "details": {
+      "assigned_to": "Assigned to",
+      "priority": "Priority",
+      "created_by": "Created by",
+      "due": "Due",
+      "created": "Created",
+      "completed": "Completed",
+      "latest_comment": "Latest Comment"
+    },
+    "messages": {
+      "load_error": "Failed to load tasks",
+      "update_success": "Task updated successfully",
+      "create_success": "Task created successfully",
+      "delete_success": "Task deleted",
+      "details_error": "Failed to load task details"
+    }
+  },
+  "customers": {
+    "title": "Guest Directory",
+    "subtitle": "Unified guest records across all historical bookings",
+    "search_placeholder": "Search by name or identification...",
+    "no_hotel": "No hotel assigned",
+    "table": {
+      "name": "Guest Name",
+      "age": "Age",
+      "id_proof": "ID Proof",
+      "last_visit": "Last Visit",
+      "preferred_room": "Preferred Room",
+      "last_status": "Last Status"
+    }
+  },
+  "bulk_bookings": {
+    "title": "Bulk / Corporate Bookings",
+    "subtitle": "Manage large group reservations and single-billing events",
+    "new_booking": "New Bulk Booking",
+    "refresh": "Refresh",
+    "loading": "Loading bulk bookings...",
+    "table": {
+      "corporate_group": "Corporate / Group",
+      "dates": "Dates",
+      "rooms_reserved": "Rooms Reserved",
+      "bill": "Consolidated Bill",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "created": "Created",
+      "confirmed": "Confirmed",
+      "checked_in": "Checked In",
+      "checked_out": "Checked Out",
+      "cancelled": "Cancelled"
+    },
+    "modals": {
+      "create": {
+        "title": "Create Bulk / Corporate Booking",
+        "client_details": "Client Details",
+        "company_name": "Company / Group Name",
+        "contact_name": "Primary Contact Name",
+        "email": "Email",
+        "phone": "Phone",
+        "stay_details": "Stay Details",
+        "check_in": "Check-in",
+        "check_out": "Check-out",
+        "adults": "Total Adults",
+        "children": "Total Children",
+        "room_requirements": "Room Requirements",
+        "add_room": "Add Room Row",
+        "no_requirements_help": "Click \"Add Room Row\" to specify what rooms this group needs.",
+        "room_type": "Room Type",
+        "quantity": "Quantity",
+        "event_details": "Event Details (Optional)",
+        "requirements_optional": "Additional Requirements (Optional)",
+        "submit": "Create Bulk Booking"
+      },
+      "details": {
+        "title": "Bulk Booking Details",
+        "contact_info": "Contact Information",
+        "stay_info": "Stay Details",
+        "room_breakdown": "Room Breakdown",
+        "table": {
+          "room_type": "Room Type",
+          "rooms": "Rooms",
+          "occupancy": "Occupancy",
+          "status": "Status",
+          "ref": "Booking Ref"
+        },
+        "view_invoice": "View Invoice"
+      },
+      "check_in": {
+        "title": "Group Check-in",
+        "subtitle": "Assign physical rooms to this group reservation.",
+        "assign_rooms_help": "Select a specific room number for each reserved spot in the categories below.",
+        "submit": "Complete Group Check-in"
+      },
+      "billing": {
+        "title": "Manage Billing & Checkout",
+        "manage_bill": "Billing Management",
+        "add_charge": "Add Extra Charge",
+        "description": "Description",
+        "amount": "Amount",
+        "save_billing": "Save Billing Updates",
+        "settle_checkout": "Settle Payment & Checkout",
+        "checkout_confirm": "Confirm Group Checkout"
+      },
+      "invoice": {
+        "title": "Bulk Booking Invoice",
+        "header": "CONSOLIDATED INVOICE",
+        "bill_to": "Bill To / Group",
+        "stay_period": "Stay Period",
+        "gst_number": "Hotel GST",
+        "corporate_gst": "Corporate GST",
+        "nights": "{{count}} Night(s)",
+        "table": {
+          "ref": "Booking Ref",
+          "room_type": "Room Type",
+          "rooms": "Rooms",
+          "rate": "Rate/Night",
+          "amount": "Amount"
+        },
+        "subtotal": "Room Charges Subtotal",
+        "extra_charges": "Extra Charges",
+        "promo_discount": "Promotion Discount",
+        "total": "Grand Total",
+        "advance_paid": "Advance Paid",
+        "balance": "Balance Due",
+        "footer": "Thank you for choosing our hospitality!",
+        "print": "Print Invoice"
+      }
+    },
+    "messages": {
+      "room_required": "You must add at least one room requirement.",
+      "create_success": "Bulk booking created successfully!",
+      "update_success": "Status updated!",
+      "load_error": "Failed to load data",
+      "billing_updated": "Billing information updated successfully",
+      "checkout_success": "Group checkout completed successfully",
+      "checkin_success": "Group check-in completed!"
+    }
+  },
+  "inventory": {
+    "title": "Inventory & Dashboard",
+    "subtitle": "Monitor your daily room availability and front-desk metrics",
+    "to": "to",
+    "refresh": "Refresh",
+    "refreshing": "Refreshing...",
+    "stats": {
+      "available": "Rooms Available Now",
+      "occupied": "Rooms Booked/Occupied",
+      "checkins": "Check-Ins (Done / Total)",
+      "checkouts": "Check-Outs (Done / Total)"
+    },
+    "forecast": {
+      "title": "30-Day Inventory Forecast",
+      "available": "Available",
+      "booked": "Booked",
+      "sold_out": "Sold Out",
+      "room_type": "Room Type"
+    },
+    "messages": {
+      "no_data": "No Inventory Data Found",
+      "no_data_help": "No inventory calendar records were found for this date range. Try generating inventory sync for your hotel rooms first.",
+      "no_hotel": "No hotel assigned",
+      "load_error": "Failed to load inventory data"
+    }
+  },
+  "services": {
+    "title": "Service Management",
+    "subtitle": "Manage hotel services and menu items",
+    "categories": "Categories",
+    "add_category": "Add Category",
+    "edit_category": "Edit Category",
+    "delete_category": "Delete Category",
+    "delete_category_confirm": "Are you sure you want to delete \"{{name}}\"? This will also delete all items in this category.",
+    "mark_restaurant": "Mark as Restaurant Category",
+    "restaurant_only_help": "Only Restaurant categories visible in POS",
+    "restaurant_label": "Restaurant",
+    "refresh_list": "Refresh List"
+  },
+  "inventory_mgmt": {
+    "item": "Item",
+    "item_name": "Item Name",
+    "category": "Category",
+    "store": "Store / Location",
+    "quantity": "Quantity",
+    "min_stock": "Min Stock",
+    "current_stock": "Current Stock",
+    "add_store": "Add Store",
+    "location": "Location / Spot",
+    "store_name": "Store Name",
+    "last_updated": "Last Updated",
+    "stock_status": "Stock Status",
+    "add_category": "Add Category",
+    "add_item": "Add Item",
+    "items": {
+      "title": "Item Management",
+      "subtitle": "Manage your hotel supplies and inventory catalog",
+      "no_items": "No items found in your catalog."
+    },
+    "stock": {
+      "title": "Stock Management",
+      "subtitle": "Track real-time stock levels and movements",
+      "adjust": "Adjust Stock",
+      "transfer": "Transfer Stock",
+      "low_stock_alerts": "Low Stock Alerts",
+      "movement_history": "Movement History",
+      "current_stock": "Current Level",
+      "status_in_stock": "In Stock",
+      "status_low": "Low Stock",
+      "status_out": "Out of Stock"
+    },
+    "procurement": {
+      "title": "Supplies & POs",
+      "subtitle": "Manage suppliers and purchase orders",
+      "new_po": "New Purchase Order",
+      "suppliers": "Suppliers",
+      "po_history": "PO History",
+      "receive": "Receive Items",
+      "vendor": "Vendor",
+      "total_value": "Total Value",
+      "po_status": {
+        "draft": "Draft",
+        "ordered": "Ordered",
+        "received": "Received",
+        "cancelled": "Cancelled"
+      }
+    },
+    "breakage": {
+      "title": "Breakage & Loss",
+      "subtitle": "Report and track damaged or missing items",
+      "report_new": "Report Incident",
+      "location": "Location / Store",
+      "reason": "Reason",
+      "reported_by": "Reported By",
+      "incident_date": "Date"
+    }
+  },
+  "support": {
+    "hotel_id": "Hotel ID",
+    "title": "Support Hub",
+    "subtitle": "Need assistance? Our support team is here to help you 24/7.",
+    "contact_info": "Contact Information",
+    "phone": "Phone Support",
+    "email": "Email Support",
+    "whatsapp": "WhatsApp Support",
+    "call_now": "Call Now",
+    "send_email": "Send Email",
+    "chat_whatsapp": "Chat on WhatsApp",
+    "no_config": "Support contact information has not been configured yet.",
+    "superadmin": {
+      "title": "Support Settings",
+      "subtitle": "Configure support contact details for each hotel",
+      "select_hotel": "Select Hotel",
+      "phone_label": "Support Phone",
+      "email_label": "Support Email",
+      "whatsapp_label": "WhatsApp Business Number",
+      "save_success": "Support settings updated successfully"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+services:
+  # PostgreSQL Database
+  - type: pserv
+    name: hotel-cms-db
+    env: docker
+    plan: basic-256mb
+    region: oregon
+    dockerfilePath: ./Dockerfile.postgres
+    disk:
+      name: hotel-cms-data
+      mountPath: /var/lib/postgresql/data
+      sizeGB: 10
+    envVars:
+      - key: POSTGRES_DB
+        value: hotel_cms
+      - key: POSTGRES_USER
+        value: hotel_admin
+      - key: POSTGRES_PASSWORD
+        generateValue: true
+
+  # Backend API
+  - type: web
+    name: hotel-cms-api
+    env: node
+    region: oregon
+    plan: starter
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: DB_HOST
+        fromService:
+          type: pserv
+          name: hotel-cms-db
+          property: host
+      - key: DB_PORT
+        fromService:
+          type: pserv
+          name: hotel-cms-db
+          property: port
+      - key: DB_NAME
+        value: hotel_cms
+      - key: DB_USER
+        value: hotel_admin
+      - key: DB_PASSWORD
+        fromService:
+          type: pserv
+          name: hotel-cms-db
+          envVarKey: POSTGRES_PASSWORD
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100
+
+databases:
+  - name: hotel-cms-postgres
+    databaseName: hotel_cms
+    user: hotel_admin
+    plan: basic-256mb

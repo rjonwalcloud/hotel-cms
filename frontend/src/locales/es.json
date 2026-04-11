@@ -1,0 +1,995 @@
+{
+  "common": {
+    "dashboard": "Tablero",
+    "profile": "Perfil",
+    "logout": "Cerrar sesión",
+    "settings": "Configuración",
+    "notifications": "Notificaciones",
+    "language": "Idioma",
+    "search": "Buscar...",
+    "loading": "Cargando...",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "actions": "Acciones",
+    "refresh": "Actualizar",
+    "refreshing": "Actualizando...",
+    "sync_inventory": "Sincronizar Inventario (30 Días)",
+    "syncing": "Sincronizando...",
+    "download_report": "Descargar Informe",
+    "view_all": "Ver Todo",
+    "add": "Agregar",
+    "update": "Actualizar",
+    "create": "Crear",
+    "select": "Seleccionar",
+    "activate": "Activar",
+    "none": "Ninguno",
+    "unassigned": "Sin asignar",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "status": "Estado",
+    "copied": "¡Copiado!",
+    "prompt": "Solicitud",
+    "reason_required": "Se requiere una razón",
+    "reason_placeholder": "Ingrese la razón aquí...",
+    "close": "Cerrar",
+    "error": "Error",
+    "deactivate": "Desactivar",
+    "refresh_success": "Actualización exitosa",
+    "error_loading": "Error al cargar datos",
+    "required": "Requerido",
+    "reset": "Restablecer",
+    "saving": "Guardando...",
+    "deleted": "Eliminado",
+    "error_delete": "Error al eliminar el elemento",
+    "update_success": "Actualizado con éxito",
+    "mark_all_read": "Marcar todo como leído",
+    "no_notifications": "No hay nuevas notificaciones",
+    "view_all_sr": "Ver Todas las Solicitudes de Servicio",
+    "save_changes": "Guardar cambios",
+    "reset_changes": "Restablecer cambios"
+  },
+  "nav": {
+    "dashboard": "Tablero",
+    "hotels": "Hoteles",
+    "subscriptions": "Suscripciones",
+    "quotas": "Cuotas",
+    "audit": "Registros de Auditoría",
+    "system": "Copia de Seguridad",
+    "settings": "Configuración",
+    "users": "Usuarios",
+    "analytics": "Análisis",
+    "menu_visibility": "Visibilidad de Menú",
+    "rooms": "Habitaciones",
+    "room_calendar": "Inventario de Habitaciones",
+    "item_inventory": "Inventario de Artículos",
+    "stock_mgmt": "Stocks",
+    "procurement": "Suministros y PO",
+    "breakage_loss": "Roturas y Pérdidas",
+    "expenses": "Gastos",
+    "report_breakage": "Reportar Rotura",
+    "room_types": "Tipos de Habitación",
+    "amenities": "Comodidades",
+    "room_addons": "Complementos de Habitación",
+    "bookings": "Reservas",
+    "bulk_bookings": "Reservas en Bloque",
+    "customers": "Clientes",
+    "booking_manager": "Gestor de Reservas",
+    "qr_codes": "Códigos QR",
+    "services": "Servicios",
+    "service_requests": "Solicitudes de Servicio",
+    "rates": "Gestión de Tarifas",
+    "promotions": "Promociones",
+    "tax_currency": "Impuestos y Moneda",
+    "tasks": "Tareas",
+    "invoices": "Facturas",
+    "pos_restaurant": "POS Restaurante",
+    "inventory_items": "Artículos",
+    "purchase_orders": "Órdenes de Compra",
+    "suppliers": "Proveedores",
+    "categories": "Categorías",
+    "stores": "Almacenes",
+    "lost_found": "Objetos Perdidos",
+    "support": "Soporte"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido de nuevo",
+    "monitoring": "Monitoreando el pulso de su hotel en tiempo real",
+    "executive_dashboard": "Tablero Ejecutivo",
+    "loading": "Cargando tablero...",
+    "no_hotel": "No hay ningún hotel asignado a su cuenta",
+    "subscription": {
+      "current_plan": "Plan Actual",
+      "days_left": "{{count}} Días restantes",
+      "expired": "Expirado",
+      "room_limit": "Límite de Habitaciones",
+      "monthly_bookings": "Reservas Mensuales",
+      "expiring_soon": "La suscripción expirará pronto. Por favor renueve para evitar interrupciones en el servicio.",
+      "no_active": "Sin Suscripción Activa",
+      "restricted": "Su hotel no tiene un plan de suscripción activo. Las operaciones están restringidas. Por favor contacte al soporte para activar un plan y desbloquear todas las funciones.",
+      "contact_support": "Contactar Soporte",
+      "view_plans": "Ver Planes"
+    },
+    "stats": {
+      "inventory": "Inventario",
+      "availability": "Disponibilidad",
+      "reservations": "Reservas",
+      "revenue": "Ingresos",
+      "vs_last_month": "vs mes anterior",
+      "this_week": "esta semana"
+    },
+    "service_requests": {
+      "title": "Pulso de Solicitudes de Servicio",
+      "live_updates": "Actualizaciones en Vivo",
+      "incoming": "Entrante",
+      "accepted": "Aceptado",
+      "in_progress": "En Progreso",
+      "completed": "Completado",
+      "new": "Nuevo",
+      "queued": "En cola",
+      "active": "Activo",
+      "done": "Hecho"
+    },
+    "analytics": {
+      "capacity": "Análisis de Capacidad",
+      "occupancy": "Ocupación",
+      "occupied": "Ocupado",
+      "vacant": "Vacante"
+    },
+    "activity": {
+      "recent": "Actividad Reciente",
+      "no_activity": "No se ha registrado actividad hoy"
+    }
+  },
+  "lost_found": {
+    "title": "Gestión de Objetos Perdidos",
+    "subtitle": "Rastree y gestione los artículos perdidos y encontrados en el hotel",
+    "add_item": "Agregar Artículo",
+    "edit_item": "Editar Artículo",
+    "delete_title": "Eliminar Artículo",
+    "delete_confirm": "¿Está seguro de que desea eliminar este artículo?",
+    "table": {
+      "item_type": "Tipo",
+      "p_name": "Nombre de la Persona",
+      "p_contact": "Contacto",
+      "category": "Categoría",
+      "status": "Estado",
+      "location": "Ubicación",
+      "actions": "Acciones"
+    },
+    "form": {
+      "type": "Tipo de Registro",
+      "found": "Encontrado",
+      "lost": "Perdido",
+      "item_name": "Nombre del Artículo",
+      "category": "Categoría",
+      "location": "Ubicación",
+      "description": "Descripción",
+      "person_name": "Nombre de la Persona",
+      "person_contact": "Contacto de la Persona",
+      "estimated_cost": "Costo Estimado",
+      "status": "Estado",
+      "incident_date": "Fecha"
+    }
+  },
+  "support": {
+    "hotel_id": "Hotel ID",
+    "title": "Centro de Soporte",
+    "subtitle": "¿Necesita ayuda? Nuestro equipo está aquí para ayudarle las 24 horas, los 7 días de la semana.",
+    "contact_info": "Información de Contacto",
+    "phone": "Soporte Telefónico",
+    "email": "Soporte por Correo",
+    "whatsapp": "Soporte por WhatsApp",
+    "call_now": "Llamar Ahora",
+    "send_email": "Enviar Correo",
+    "chat_whatsapp": "Chatear por WhatsApp",
+    "no_config": "La información de contacto de soporte aún no ha sido configurada.",
+    "superadmin": {
+      "title": "Configuración de Soporte",
+      "subtitle": "Configure los detalles de contacto de soporte para cada hotel",
+      "select_hotel": "Seleccionar Hotel",
+      "phone_label": "Teléfono de Soporte",
+      "email_label": "Correo de Soporte",
+      "whatsapp_label": "Número de WhatsApp Business",
+      "save_success": "Configuración de soporte actualizada con éxito"
+    }
+  },
+  "rooms": {
+    "title": "Gestión de Habitaciones",
+    "subtitle": "Administre las habitaciones de su hotel",
+    "room": "Habitación",
+    "add_room": "Agregar Habitación",
+    "edit_room": "Editar Habitación",
+    "refresh_list": "Actualizar Lista",
+    "room_number": "Número de Habitación",
+    "floor": "Piso",
+    "room_type": "Tipo de Habitación",
+    "base_price": "Precio Base",
+    "status": {
+      "label": "Estado",
+      "available": "Disponible",
+      "occupied": "Ocupado",
+      "maintenance": "Mantenimiento",
+      "blocked": "Bloqueado"
+    },
+    "legend": {
+      "available": "Disponible",
+      "occupied": "Ocupado",
+      "maintenance": "Mantenimiento",
+      "blocked": "Bloqueado"
+    },
+    "floor_label": "Piso {{floor}}",
+    "unassigned_floor": "Piso sin asignar",
+    "no_rooms": "No se encontraron habitaciones. Agrega algunas habitaciones para ver el diseño.",
+    "sync_success": "Inventario sincronizado con éxito por 1 año",
+    "delete_confirm": "¿Eliminar habitación {{number}}?",
+    "delete_title": "Eliminar Habitación"
+  },
+  "room_types": {
+    "title": "Gestión de Tipos de Habitación",
+    "subtitle": "Defina categorías como Deluxe, Estándar, etc.",
+    "add_type": "Agregar Tipo de Habitación",
+    "edit_type": "Editar Tipo de Habitación",
+    "delete_title": "Eliminar Tipo de Habitación",
+    "delete_confirm": "¿Eliminar tipo de habitación \"{{name}}\"?",
+    "name": "Nombre del Tipo",
+    "short_code": "Identificador (Etiqueta/Emoji)",
+    "description": "Descripción",
+    "base_price": "Precio Base",
+    "max_occupancy": "Capacidad Máxima",
+    "amenities": "Comodidades",
+    "no_amenities": "No se han definido comodidades. Agréguelas desde el menú de Comodidades."
+  },
+  "promotions": {
+    "title": "Promociones y Cupones",
+    "subtitle": "Administre descuentos, ofertas y códigos de cupón",
+    "tabs": {
+      "promotions": "Promociones",
+      "coupons": "Códigos de Cupón"
+    },
+    "promo": {
+      "title": "Promociones y Ofertas de Aplicación Automática",
+      "new": "Nueva Promoción",
+      "edit": "Editar Promoción",
+      "delete_confirm": "¿Eliminar esta promoción?",
+      "name": "Nombre de la Promoción",
+      "auto_apply": "Aplicación Automática",
+      "discount": "Descuento",
+      "valid_period": "Periodo de Validez",
+      "applies_to": "Se aplica a",
+      "all_types": "Todos los Tipos de Habitación",
+      "eligible_bookings": "Aplicar automáticamente a reservas elegibles"
+    },
+    "coupon": {
+      "title": "Códigos de Cupón",
+      "new": "Nuevo Cupón",
+      "edit": "Editar Código de Cupón",
+      "delete_confirm": "¿Eliminar este código de cupón?",
+      "code": "Código de Cupón",
+      "usage": "Uso",
+      "max_uses": "Total de Usos Máximo",
+      "unlimited": "Ilimitado",
+      "empty": "No hay códigos de cupón. Crea uno para ofrecer descuentos manuales."
+    },
+    "form": {
+      "discount_type": "Tipo de Descuento",
+      "discount_percentage": "Porcentaje (%)",
+      "discount_flat": "Monto Fijo",
+      "discount_value": "Valor del Descuento",
+      "max_discount": "Descuento Máximo",
+      "cap_amount": "Monto límite",
+      "start_date": "Fecha de Inicio",
+      "end_date": "Fecha de Finalización",
+      "min_nights": "Noches Mínimas",
+      "min_booking_amount": "Monto de Reserva Mínimo",
+      "applicable_room_types": "Tipos de Habitación Aplicables",
+      "per_booking_limit": "Límite por Reserva",
+      "internal_note": "Nota interna",
+      "leave_empty_all": "Dejar vacío para aplicar a todos los tipos de habitación"
+    }
+  },
+  "bookings": {
+    "title": "Gestión de Reservas",
+    "subtitle": "Administrar reservas y check-ins",
+    "new_booking": "Nueva Reserva",
+    "search_guest": "Buscar Huésped",
+    "search_placeholder": "Nombre o Teléfono...",
+    "status_filter": "Estado",
+    "all_statuses": "Todos los Estados",
+    "date_range": "Rango de Fechas",
+    "all_time": "Todo el Tiempo",
+    "today": "Hoy",
+    "tomorrow": "Mañana",
+    "this_week": "Esta Semana",
+    "last_30_days": "Últimos 30 Días",
+    "custom_range": "Rango Personalizado",
+    "from": "Desde",
+    "to": "Hasta",
+    "clear_filters": "Limpiar Filtros",
+    "table": {
+      "pnr": "PNR",
+      "guest": "Huésped",
+      "requirements": "Habitaciones/Requisitos",
+      "check_in": "Check-in",
+      "check_out": "Check-out",
+      "amount": "Monto",
+      "status": "Estado"
+    },
+    "status": {
+      "created": "Creado",
+      "confirmed": "Confirmado",
+      "checked_in": "Check-in Realizado",
+      "checked_out": "Check-out Realizado",
+      "no_show": "No se Presentó",
+      "refunded": "Reembolsado",
+      "cancelled": "Cancelado"
+    },
+    "actions": {
+      "details": "Detalles",
+      "check_in": "Check-in",
+      "check_out": "Check-out",
+      "invoice": "Factura",
+      "cancel": "Cancelar"
+    },
+    "modals": {
+      "create": {
+        "title": "Crear Reserva",
+        "room_type": "Tipo de Habitación",
+        "select_category": "Seleccionar Categoría",
+        "quantity": "Cantidad",
+        "adults": "Adultos",
+        "children": "Niños",
+        "check_in": "Fecha de Check-in",
+        "check_out": "Fecha de Check-out",
+        "room_addons": "Complementos de Habitación",
+        "no_addons": "No hay complementos activos disponibles.",
+        "guest_name": "Nombre del Huésped",
+        "guest_email": "Correo Electrónico",
+        "guest_phone": "Teléfono",
+        "submit": "Crear Reserva"
+      },
+      "check_in": {
+        "title": "Check-In: Detalles del Huésped",
+        "assign_rooms": "Asignar Habitaciones",
+        "select_room": "Seleccionar Habitación",
+        "guest_label": "Huésped {{index}}",
+        "full_name": "Nombre Completo",
+        "full_name_placeholder": "Nombre completo según identificación",
+        "age": "Edad",
+        "id_proof_type": "Tipo de Identificación",
+        "id_proof_number": "Número de Identificación",
+        "id_number_placeholder": "Ingrese número de identificación",
+        "submit": "Completar Check-In"
+      },
+      "check_out": {
+        "title": "Check-Out y Facturación",
+        "extra_charges_title": "Servicio de Habitación y Cargos Extra",
+        "charge_desc_placeholder": "Descripción (ej. Servicio de Habitación)",
+        "add_charge": "Agregar Cargo",
+        "apply_coupon": "Aplicar Código de Cupón",
+        "coupon_placeholder": "Ingrese código de cupón",
+        "coupon_applied": "Cupón aplicado",
+        "preview_bill": "Vista Previa de Factura",
+        "finalize": "Finalizar Check-Out",
+        "print": "Imprimir Factura",
+        "print_invoice": "Imprimir Factura",
+        "back": "Volver a Editar",
+        "back_to_edit": "Volver a Editar",
+        "close": "Cerrar"
+      },
+      "timeline": {
+        "title": "Detalles de Reserva y Línea de Tiempo",
+        "guest": "Huésped",
+        "no_email": "No se proporcionó correo",
+        "reference": "Referencia (PNR)",
+        "stay_details": "Detalles de la Estancia",
+        "occupancy": "Ocupación",
+        "adult_single": "Adulto",
+        "adult_plural": "Adultos",
+        "child_single": "Niño",
+        "child_plural": "Niños",
+        "guests_total": "{{count}} Huéspedes Total",
+        "audit_trail": "Registro de Auditoría y Línea de Tiempo",
+        "no_events": "No se registraron eventos en la línea de tiempo.",
+        "action_by": "Acción realizada por: {{actor}}"
+      }
+    },
+    "billing": {
+      "invoice": "FACTURA",
+      "date": "Fecha",
+      "guest_name": "Nombre del Huésped",
+      "occupancy": "Ocupación",
+      "rooms": "Habitación(es)",
+      "duration": "Duración",
+      "nights": "{{count}} Noche(s)",
+      "description": "Descripción",
+      "amount": "Monto",
+      "room_charges": "Cargos de Habitación ({{count}} noches)",
+      "rate_discount": "Descuento de tarifa",
+      "coupon_discount": "Descuento de Cupón",
+      "room_addons_title": "Complementos de Habitación",
+      "extra_charges_title": "Cargos Extra",
+      "manual_service": "Servicio Manual",
+      "room_service_title": "Servicio de Habitación (Pedidos QR)",
+      "grand_total": "Gran Total",
+      "thank_you": "¡Gracias por hospedarse con nosotros!"
+    },
+    "messages": {
+      "loading": "Cargando reservas...",
+      "no_hotel": "No hay hotel asignado",
+      "assign_all_rooms": "Por favor asigne una habitación específica para todos los espacios solicitados",
+      "confirm_check_in": "Completar Check-in",
+      "confirm_check_in_msg": "¿Está seguro de que desea completar el check-in para estos huéspedes?",
+      "check_in_success": "¡Huésped registrado con éxito!",
+      "check_out_success": "¡Huésped retirado con éxito!",
+      "bill_calculated": "¡Factura calculada!",
+      "confirm_check_out": "Finalizar Check-out",
+      "confirm_check_out_msg": "¿Está seguro de que desea finalizar la facturación y retirar a este huésped? Esto generará la factura final.",
+      "checkout_blocked": "Check-out Bloqueado",
+      "booking_cancelled": "Reserva cancelada",
+      "cancel_confirm_title": "Cancelar Reserva",
+      "cancel_confirm_msg": "Ingrese el motivo de la cancelación:",
+      "not_found": "Reserva no encontrada."
+    }
+  },
+  "service_requests": {
+    "title": "Solicitudes de Servicio",
+    "subtitle": "Gestione y cumpla con los pedidos de servicio a la habitación en vivo",
+    "refresh": "Actualizar lista",
+    "stats": {
+      "pending": "Pendiente",
+      "accepted": "Aceptado",
+      "in_progress": "En Progreso",
+      "completed": "Completado",
+      "cancelled": "Cancelado"
+    },
+    "table": {
+      "room_info": "Información de Habitación",
+      "order_details": "Detalles del Pedido",
+      "guest_contact": "Contacto del Huésped",
+      "status": "Estado",
+      "timeline": "Línea de Tiempo",
+      "actions": "Acciones"
+    },
+    "actions": {
+      "details": "Detalles",
+      "review": "Revisar Pedido",
+      "reject_all": "Rechazar Todo",
+      "start_prep": "Iniciar Preparación",
+      "mark_complete": "Marcar como Completado",
+      "cancel_active": "Cancelar Activo",
+      "invoice": "Factura"
+    },
+    "modals": {
+      "review": {
+        "title": "Revisar Pedido",
+        "fulfillment_check": "Verificación de Cumplimiento Parcial",
+        "verify_msg": "Verifique cada artículo en este pedido. Si un artículo está agotado o no está disponible, desmárquelo para marcarlo como Rechazado.",
+        "confirm": "Confirmar Pedido"
+      },
+      "details": {
+        "title": "Detalles e Historial del Pedido",
+        "room": "Habitación",
+        "guest": "Huésped",
+        "items": "Artículos del Pedido",
+        "timeline_root": "Línea de Tiempo (Artículo Raíz)",
+        "no_history": "No se ha registrado historial aún."
+      },
+      "invoice": {
+        "title": "Factura de Solicitud de Servicio",
+        "receipt": "RECIBO DE SERVICIO",
+        "order_ref": "Ref de Pedido",
+        "total_items": "Total de Artículos Completados",
+        "description": "Descripción",
+        "qty": "Cant",
+        "unit_price": "Precio Unitario",
+        "total": "Total",
+        "subtotal": "Subtotal",
+        "grand_total": "Gran Total",
+        "thank_you": "¡Gracias por su pedido!",
+        "print": "Imprimir Recibo"
+      }
+    },
+    "messages": {
+      "loading": "Cargando solicitudes...",
+      "load_error": "Error al cargar solicitudes de servicio",
+      "update_success": "Pedido marcado como {{status}}",
+      "update_error": "Error al actualizar el estado del pedido",
+      "review_success": "Pedido revisado y procesado con éxito",
+      "review_error": "Error al procesar la revisión del pedido",
+      "details_error": "Error al cargar detalles de la solicitud",
+      "no_orders": "No hay pedidos activos",
+      "waiting_msg": "¡Listo y esperando! Los pedidos aparecerán aquí tan pronto como los huéspedes escaneen los códigos QR de su habitación."
+    },
+    "currency_tax": {
+      "title": "Configuración de Impuestos y Moneda",
+      "subtitle": "Administre su moneda de facturación e impuestos del hotel",
+      "currency_setup": "Configuración de Moneda",
+      "currency_code": "Código de Moneda",
+      "currency_code_placeholder": "ej. USD, EUR, MXN",
+      "currency_symbol": "Símbolo de Moneda",
+      "currency_symbol_placeholder": "ej. $, €, ₱",
+      "currency_symbol_help": "Este símbolo reemplazará al $ en todas las páginas y facturas.",
+      "save_currency": "Guardar Moneda",
+      "saving": "Guardando...",
+      "billing_taxes": "Impuestos de Facturación",
+      "billing_taxes_subtitle": "Los impuestos se aplican automáticamente al finalizar la compra.",
+      "add_tax": "Agregar Impuesto",
+      "table": {
+        "tax_details": "Detalles del Impuesto",
+        "type": "Tipo",
+        "status": "Estado",
+        "actions": "Acciones"
+      },
+      "tax_types": {
+        "inclusive": "Inclusivo",
+        "exclusive": "Exclusivo"
+      },
+      "status": {
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "activated": "Impuesto activado",
+        "deactivated": "Impuesto desactivado"
+      },
+      "messages": {
+        "loading": "Cargando configuración...",
+        "load_error": "Error al cargar los datos de configuración",
+        "save_success": "Configuración de moneda guardada con éxito",
+        "save_error": "Error al guardar la configuración de moneda",
+        "tax_update_success": "Impuesto actualizado con éxito",
+        "tax_create_success": "Impuesto creado con éxito",
+        "tax_save_error": "Error al guardar los detalles del impuesto",
+        "tax_delete_confirm": "¿Está seguro de que desea eliminar este impuesto?",
+        "tax_delete_success": "Impuesto eliminado con éxito",
+        "tax_delete_error": "Error al eliminar el impuesto",
+        "tax_status_error": "Error al actualizar el estado del impuesto",
+        "no_taxes": "No hay impuestos configurados aún.",
+        "create_first": "Cree su primer impuesto"
+      },
+      "modals": {
+        "edit_title": "Editar Definición de Impuesto",
+        "create_title": "Crear Nuevo Impuesto",
+        "tax_name": "Nombre del Impuesto",
+        "tax_name_placeholder": "ej. IVA, ISH",
+        "category": "Categoría",
+        "rate": "Tasa (%)",
+        "rate_placeholder": "ej. 16",
+        "inclusive_tax": "Impuesto Inclusivo",
+        "inclusive_help": "El precio base del artículo ya incluye este impuesto. El sistema calculará el subtotal visualmente hacia atrás durante el pago.",
+        "exclusive_help": "La tasa de impuesto se agregará al precio base durante el pago.",
+        "save_tax": "Guardar Impuesto"
+      }
+    },
+    "rates": {
+      "title": "Gestión de Tarifas",
+      "subtitle": "Configure precios estacionales y planes de tarifas",
+      "refresh": "Actualizar",
+      "tabs": {
+        "plans": "Planes de Tarifas",
+        "rules": "Reglas de Tarifas"
+      },
+      "plans": {
+        "title": "Planes de Tarifas",
+        "new": "Nuevo Plan",
+        "empty": "No hay planes de tarifas aún. ¡Cree el primero!",
+        "table": {
+          "name": "Nombre del Plan",
+          "description": "Descripción",
+          "rules": "Reglas",
+          "priority": "Prioridad",
+          "status": "Estado",
+          "actions": "Acciones"
+        }
+      },
+      "rules": {
+        "title": "Reglas de Tarifas (Precios Estacionales)",
+        "new": "Nueva Regla",
+        "empty": "No hay reglas de tarifas. Agregue reglas para anular los precios base en rangos de fechas.",
+        "plan_required": "Cree un Plan de Tarifas primero antes de agregar reglas.",
+        "table": {
+          "name": "Nombre de la Regla",
+          "plan": "Plan de Tarifas",
+          "room_type": "Tipo de Habitación",
+          "dates": "Rango de Fechas",
+          "price": "Precio",
+          "type": "Tipo",
+          "status": "Estado",
+          "actions": "Acciones"
+        }
+      },
+      "status": {
+        "default": "Predeterminado",
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "inactive_plan_off": "Inactivo (Plan Desactivado)"
+      },
+      "adj_types": {
+        "fixed": "Precio Fijo",
+        "percent_inc": "% de Aumento",
+        "percent_dec": "% de Disminución"
+      },
+      "modals": {
+        "plan": {
+          "edit": "Editar Plan de Tarifas",
+          "create": "Nuevo Plan de Tarifas",
+          "name": "Nombre do Plan *",
+          "name_placeholder": "ej. Temporada Alta, Especial Fin de Semana",
+          "description": "Descripción",
+          "description_placeholder": "Descripción opcional",
+          "priority": "Prioridad",
+          "priority_help": "Las reglas de mayor prioridad tienen precedencia",
+          "is_default": "Plan Predeterminado",
+          "is_active": "Activo",
+          "save_create": "Crear Plan",
+          "save_update": "Actualizar Plan"
+        },
+        "rule": {
+          "edit": "Editar Regla de Tarifas",
+          "create": "Nueva Regla de Tarifas",
+          "plan": "Plan de Tarifas *",
+          "plan_placeholder": "Seleccione un Plan",
+          "plan_inactive_warning": "Advertencia: El plan seleccionado está inactivo. Esta regla no se aplicará.",
+          "room_type": "Tipo de Habitación *",
+          "room_type_placeholder": "Seleccione Tipo de Habitación",
+          "name": "Nombre de la Regla",
+          "name_placeholder": "ej. Tarifas de Navidad, Verano Premium",
+          "start_date": "Fecha de Inicio *",
+          "end_date": "Fecha de Fin *",
+          "price": "Anulación de Precio *",
+          "price_placeholder": "Anular precio por noche",
+          "adj_type": "Tipo de Ajuste",
+          "min_nights": "Noches Mínimas",
+          "is_active": "Activo",
+          "save_create": "Crear Regla",
+          "save_update": "Actualizar Regla"
+        }
+      },
+      "messages": {
+        "load_error": "Error al cargar los datos de tarifas",
+        "name_required": "El nombre es obligatorio",
+        "plan_updated": "Plan de tarifas actualizado",
+        "plan_created": "Plan de tarifas creado",
+        "plan_save_error": "Error al guardar el plan de tarifas",
+        "plan_delete_confirm": "¿Eliminar este plan de tarifas y todas sus reglas?",
+        "plan_delete_success": "Plan de tarifas eliminado",
+        "plan_delete_error": "Error al eliminar el plan",
+        "fields_required": "Todos los campos obligatorios deben ser completados",
+        "rule_updated": "Regla de tarifas actualizada",
+        "rule_created": "Regla de tarifas creada",
+        "rule_save_error": "Error al guardar la regla de tarifas",
+        "rule_delete_confirm": "¿Eliminar esta regla de tarifas?",
+        "rule_delete_success": "Regla de tarifas eliminada",
+        "rule_delete_error": "Error al eliminar la regla"
+      }
+    },
+    "booking_manager": {
+      "title": "Gestor de Reservas",
+      "subtitle": "Gestionar canales de reserva externos (OYO, Booking.com, etc.)",
+      "refresh": "Actualizar Lista",
+      "add_channel": "Añadir Canal",
+      "add_booking": "Añadir Reserva",
+      "stats": {
+        "active_channels": "Canales Activos",
+        "total_bookings": "Total de Reservas",
+        "total_revenue": "Ingresos Totales",
+        "commission_paid": "Comisión Pagada"
+      },
+      "tabs": {
+        "channels": "Canales",
+        "bookings": "Reservas",
+        "analytics": "Analítica"
+      },
+      "channels": {
+        "no_channels": "No hay canales configurados",
+        "no_channels_help": "Añada su primer canal de reserva para comenzar",
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "bookings": "Reservas",
+        "revenue": "Ingresos",
+        "commission": "Comisión",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "enable": "Habilitar",
+        "disable": "Deshabilitar",
+        "delete_title": "Eliminar Canal",
+        "delete_confirm": "¿Eliminar este canal?",
+        "add_title": "Añadir Canal",
+        "edit_title": "Editar Canal",
+        "form": {
+          "name": "Nombre",
+          "type": "Tipo de Canal",
+          "api_key": "Clave API",
+          "api_secret": "Secreto API",
+          "property_id": "ID de la Propiedad",
+          "commission_rate": "Tasa de Comisión (%)",
+          "select_type": "Seleccionar Tipo"
+        }
+      },
+      "bookings": {
+        "no_bookings": "Aún no hay reservas de canales",
+        "table": {
+          "channel": "Canal",
+          "ext_id": "ID Ext./PNR",
+          "guest": "Huésped",
+          "checkin": "Check-in",
+          "checkout": "Check-out",
+          "amount": "Monto",
+          "status": "Estado",
+          "actions": "Acciones",
+          "commission": "Comisión"
+        },
+        "add_title": "Añadir Reserva de Canal",
+        "form": {
+          "select_channel": "Seleccionar Canal",
+          "external_id": "ID de Reserva Externo",
+          "guest_name": "Nombre del Huésped",
+          "guest_email": "Correo del Huésped",
+          "guest_phone": "Teléfono del Huésped",
+          "rooms": "Habitaciones",
+          "total_amount": "Monto Total",
+          "commission_amount": "Monto de la Comisión"
+        },
+        "status": {
+          "pending": "Pendiente",
+          "confirmed": "Confirmado",
+          "completed": "Completado",
+          "cancelled": "Cancelado",
+          "noshow": "No Presentado"
+        }
+      },
+      "analytics": {
+        "title": "Rendimiento del Canal",
+        "no_data": "No hay datos disponibles",
+        "table": {
+          "total": "Total",
+          "confirmed": "Confirmado",
+          "completed": "Completado",
+          "cancelled": "Cancelado"
+        }
+      },
+      "messages": {
+        "load_error": "Error al cargar los datos",
+        "channel_updated": "Canal actualizado",
+        "channel_created": "Canal creado",
+        "booking_added": "Reserva añadida",
+        "status_updated": "Estado actualizado",
+        "delete_success": "Canal eliminado",
+        "toggle_success": "Estado del canal actualizado"
+      }
+    },
+    "addons": {
+      "title": "Complementos de Habitación",
+      "subtitle": "Crear complementos opcionales para las reservas (por ejemplo, Traslado al Aeropuerto, Cama Suplementaria)",
+      "add_new": "Añadir Nuevo Complemento",
+      "table": {
+        "name": "Nombre del Complemento",
+        "description": "Descripción",
+        "price": "Precio",
+        "status": "Estado",
+        "actions": "Acciones"
+      },
+      "form": {
+        "name": "Nombre",
+        "name_placeholder": "ej., Traslado al Aeropuerto Premium",
+        "description": "Descripción",
+        "description_placeholder": "Descripción detallada...",
+        "price": "Precio",
+        "price_placeholder": "ej., 50.00",
+        "active": "Activo (Disponible para reserva)"
+      },
+      "modals": {
+        "create_title": "Crear Complemento",
+        "edit_title": "Editar Complemento",
+        "delete_title": "Eliminar Complemento",
+        "delete_confirm": "¿Está seguro de que desea eliminar este complemento?"
+      },
+      "messages": {
+        "load_error": "Error al cargar los complementos",
+        "update_success": "Complemento actualizado con éxito",
+        "create_success": "Complemento creado con éxito",
+        "delete_success": "Complemento eliminado con éxito",
+        "toggle_error": "Error al cambiar el estado",
+        "delete_error": "Error al eliminar el complemento"
+      }
+    },
+    "amenities": {
+      "title": "Gestión de Comodidades",
+      "subtitle": "Defina las comodidades disponibles para sus habitaciones",
+      "refresh": "Actualizar Lista",
+      "add_new": "Añadir Comodidad",
+      "table": {
+        "icon": "Icono",
+        "name": "Nombre",
+        "description": "Descripción"
+      },
+      "form": {
+        "name": "Nombre",
+        "name_placeholder": "ej. WiFi de alta velocidad",
+        "description": "Descripción",
+        "description_placeholder": "Añadir detalles descriptivos...",
+        "icon": "Icono (Seleccionar o escribir emoji/etiqueta)",
+        "icon_placeholder": "ej. Wifi, 🏊‍♂️, Gym"
+      },
+      "modals": {
+        "create_title": "Añadir Comodidad",
+        "edit_title": "Editar Comodidad",
+        "delete_title": "Eliminar Comodidad",
+        "delete_confirm": "¿Eliminar comodidad \"{{name}}\"?"
+      },
+      "messages": {
+        "load_error": "Error al cargar las comodidades",
+        "update_success": "¡Comodidad actualizada!",
+        "create_success": "¡Comodidad creada!",
+        "delete_success": "Comodidad eliminada"
+      }
+    },
+    "settings": {
+      "title": "Configuración del Hotel",
+      "subtitle": "Administre la información de su hotel",
+      "form": {
+        "hotel_name": "Nombre del Hotel",
+        "logo_url": "URL del Logotipo",
+        "logo_placeholder": "https://ejemplo.com/logotipo.png",
+        "logo_hint": "Proporcione un enlace directo a la imagen del logotipo de su hotel.",
+        "address": "Dirección",
+        "city": "Ciudad",
+        "state": "Estado/Provincia",
+        "country": "País",
+        "postal_code": "Código Postal",
+        "phone": "Teléfono",
+        "email": "Correo Electrónico",
+        "gst_number": "Número de Identificación Fiscal (para facturas)",
+        "gst_placeholder": "ej. 22AAAAA0000A1Z5"
+      },
+      "messages": {
+        "load_error": "Error al cargar los datos del hotel",
+        "update_success": "¡Configuración del hotel actualizada con éxito!",
+        "update_error": "Error al actualizar la configuración"
+      },
+      "no_hotel": "Ningún hotel asignado"
+    },
+    "tasks": {
+      "title": "Gestión de Tareas",
+      "subtitle": "Crear y asignar tareas a los miembros del personal",
+      "refresh": "Actualizar",
+      "automation": "Tareas Auto",
+      "automation_hint": "Generar tareas al salir",
+      "create": "Crear Tarea",
+      "stats": {
+        "pending": "Pendiente",
+        "in_progress": "En Progreso",
+        "completed": "Completado",
+        "cancelled": "Cancelado"
+      },
+      "table": {
+        "title": "Título",
+        "assigned_to": "Asignado A",
+        "priority": "Prioridad",
+        "status": "Estado",
+        "due_date": "Fecha de Vencimiento",
+        "details": "Detalles",
+        "view": "Ver",
+        "unassigned": "Sin asignar"
+      },
+      "form": {
+        "title": "Título",
+        "title_placeholder": "ej. Limpiar Habitación 101",
+        "description": "Descripción",
+        "description_placeholder": "Detalles de la tarea...",
+        "assign_to": "Asignar A",
+        "priority": "Prioridad",
+        "due_date": "Fecha de Vencimiento",
+        "status": "Estado"
+      },
+      "modals": {
+        "create_title": "Crear Tarea",
+        "edit_title": "Editar Tarea",
+        "details_title": "Detalles de la Tarea",
+        "history_title": "Registro de Historial de Tareas",
+        "no_history": "Aún no hay historial registrado.",
+        "delete_title": "Eliminar Tarea",
+        "delete_confirm": "¿Está seguro de que desea eliminar esta tarea? Esta acción no se puede deshacer."
+      },
+      "details": {
+        "assigned_to": "Asignado a",
+        "priority": "Prioridad",
+        "created_by": "Creado por",
+        "due": "Vencimiento",
+        "created": "Creado",
+        "completed": "Completado",
+        "latest_comment": "Último Comentario"
+      },
+      "messages": {
+        "load_error": "Error al cargar las tareas",
+        "update_success": "Tarea actualizada con éxito",
+        "create_success": "Tarea creada con éxito",
+        "delete_success": "Tarea eliminada",
+        "details_error": "Error al cargar los detalles de la tarea"
+      }
+    },
+    "inventory": {
+      "title": "Inventario y Panel de Control",
+      "subtitle": "Supervise su disponibilidad diaria de habitaciones y métricas de recepción",
+      "to": "a",
+      "refresh": "Actualizar",
+      "refreshing": "Actualizando...",
+      "stats": {
+        "available": "Habitaciones Disponibles Ahora",
+        "occupied": "Habitaciones Reservadas/Ocupadas",
+        "checkins": "Check-Ins (Realizados / Total)",
+        "checkouts": "Check-Outs (Realizados / Total)"
+      },
+      "forecast": {
+        "title": "Pronóstico de Inventario de 30 Días",
+        "available": "Disponible",
+        "booked": "Reservado",
+        "sold_out": "Agotado",
+        "room_type": "Tipo de Habitación"
+      },
+      "messages": {
+        "no_data": "No se Encontraron Datos de Inventario",
+        "no_data_help": "No se encontraron registros de calendario de inventario para este rango de fechas. Intente generar la sincronización de inventario para sus habitaciones primero.",
+        "no_hotel": "No hay hotel asignado",
+        "load_error": "Error al cargar los datos de inventario"
+      }
+    }
+  },
+  "inventory_mgmt": {
+    "item": "Artículo",
+    "item_name": "Nombre del Artículo",
+    "category": "Categoría",
+    "store": "Almacén / Ubicación",
+    "unit": "Unidad",
+    "quantity": "Cantidad",
+    "min_stock": "Stock Mín",
+    "current_stock": "Stock Actual",
+    "last_updated": "Última Actualización",
+    "stock_status": "Estado de Stock",
+    "add_category": "Agregar Categoría",
+    "add_item": "Agregar Artículo",
+    "items": {
+      "title": "Gestión de Artículos",
+      "subtitle": "Administre sus suministros y catálogo de inventario",
+      "no_items": "No se encontraron artículos en su catálogo."
+    },
+    "stock": {
+      "title": "Gestión de Existencias",
+      "subtitle": "Seguimiento de niveles y movimientos en tiempo real",
+      "adjust": "Ajustar Stock",
+      "transfer": "Transferir Stock",
+      "low_stock_alerts": "Alertas de Stock Bajo",
+      "movement_history": "Historial de Movimientos",
+      "current_stock": "Nivel Actual",
+      "status_in_stock": "En Stock",
+      "status_low": "Stock Bajo",
+      "status_out": "Sin Stock"
+    },
+    "procurement": {
+      "title": "Suministros y OC",
+      "subtitle": "Gestionar proveedores y órdenes de compra",
+      "new_po": "Nueva Orden de Compra",
+      "suppliers": "Proveedores",
+      "po_history": "Historial de OC",
+      "receive": "Recibir Artículos",
+      "vendor": "Proveedor",
+      "total_value": "Valor Total",
+      "po_status": {
+        "draft": "Borrador",
+        "ordered": "Pedido",
+        "received": "Recibido",
+        "cancelled": "Cancelado"
+      }
+    },
+    "breakage": {
+      "title": "Roturas y Pérdidas",
+      "subtitle": "Reportar y rastrear artículos dañados o perdidos",
+      "report_new": "Reportar Incidente",
+      "location": "Ubicación / Almacén",
+      "reason": "Motivo",
+      "reported_by": "Reportado Por",
+      "incident_date": "Fecha"
+    }
+  }
+}
