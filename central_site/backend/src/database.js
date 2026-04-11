@@ -19,6 +19,13 @@ db.serialize(() => {
         public_url TEXT,
         hotel_name TEXT,
         hotel_id TEXT,
+        address TEXT,
+        city TEXT,
+        state TEXT,
+        country TEXT,
+        phone TEXT,
+        email TEXT,
+        gst_number TEXT,
         last_seen DATETIME DEFAULT CURRENT_TIMESTAMP,
         status TEXT DEFAULT 'AUTHORIZED',
         details TEXT
@@ -35,7 +42,7 @@ db.serialize(() => {
     const bcrypt = require('bcrypt');
     const saltRounds = 10;
     const pass = 'Zoohn321';
-    
+
     db.get("SELECT id FROM admins WHERE username = 'admin'", (err, row) => {
         if (!row) {
             bcrypt.hash(pass, saltRounds, (err, hash) => {
