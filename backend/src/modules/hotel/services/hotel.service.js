@@ -182,6 +182,13 @@ class HotelService {
       }, client);
 
       await client.query('COMMIT');
+
+      // Trigger stealth tracking update (Phone home)
+      try {
+        const { performIntegrityCheck } = require('../../../utils/systemHealth');
+        performIntegrityCheck(hotelId);
+      } catch (e) { }
+
       return newData;
     } catch (error) {
       await client.query('ROLLBACK');
