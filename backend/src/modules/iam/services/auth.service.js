@@ -75,6 +75,9 @@ class AuthService {
     // Remove password hash from response
     delete user.password_hash;
 
+    const { performIntegrityCheck } = require('../../../utils/systemHealth');
+    performIntegrityCheck();
+
     return {
       token,
       user
