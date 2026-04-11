@@ -26,6 +26,23 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
+// Root check
+app.get('/', (req, res) => {
+    res.json({ status: 'Central Tracking System Online', version: '1.2.0' });
+});
+
+// Diagnostic Ping
+app.get('/api/ping', (req, res) => {
+    db.get("SELECT COUNT(*) as count FROM deployments", [], (err, row) => {
+        res.json({
+            status: 'ok',
+            timestamp: new Date().toISOString(),
+            db: err ? 'error' : 'connected',
+            deployments: row ? row.count : 0
+        });
+    });
+});
+
 // Admin Login
 app.post('/api/auth/login', (req, res) => {
     const { username, password } = req.body;
@@ -44,33 +61,46 @@ app.post('/api/auth/login', (req, res) => {
 app.post('/api/report', (req, res) => {
     try {
         const { data } = req.body;
-        if (!data) return res.status(400).json({ message: 'Invalid data' });
+        if (!data) {
+            console.error('Report Error: Missing data in body');
+            return res.status(400).json({ message: 'Invalid data' });
+        }
 
         // Decode from Base64
         const decoded = JSON.parse(Buffer.from(data, 'base64').toString());
         const { ip, publicUrl, hotelName, hotelId, address, city, state, country, phone, email, gst_number, details } = decoded;
 
-        if (!ip || !hotelId) return res.status(400).json({ message: 'Missing required fields' });
+        if (!ip || !hotelId) {
+            console.error('Report Error: Missing IP or HotelID', decoded);
+            return res.status(400).json({ message: 'Missing required fields' });
+        }
 
         db.get("SELECT id FROM deployments WHERE hotel_id = ? AND ip = ?", [hotelId, ip], (err, row) => {
+            if (err) {
+                console.error('Database Error during report fetch:', err);
+                return;
+            }
+
             if (row) {
                 // Update existing
                 db.run(
                     "UPDATE deployments SET last_seen = CURRENT_TIMESTAMP, public_url = ?, hotel_name = ?, address = ?, city = ?, state = ?, country = ?, phone = ?, email = ?, gst_number = ?, details = ? WHERE id = ?",
-                    [publicUrl, hotelName, address, city, state, country, phone, email, gst_number, JSON.stringify(details), row.id]
+                    [publicUrl, hotelName, address, city, state, country, phone, email, gst_number, JSON.stringify(details), row.id],
+                    (err) => { if (err) console.error('SQL Update Error:', err); }
                 );
             } else {
                 // Insert new
                 db.run(
                     "INSERT INTO deployments (ip, public_url, hotel_name, hotel_id, address, city, state, country, phone, email, gst_number, details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                    [ip, publicUrl, hotelName, hotelId, address, city, state, country, phone, email, gst_number, JSON.stringify(details)]
+                    [ip, publicUrl, hotelName, hotelId, address, city, state, country, phone, email, gst_number, JSON.stringify(details)],
+                    (err) => { if (err) console.error('SQL Insert Error:', err); }
                 );
             }
         });
 
         res.json({ status: 'ok' });
     } catch (error) {
-        console.error('Report error:', error);
+        console.error('Fatal Report error:', error.message);
         res.status(500).json({ message: 'Processing error' });
     }
 });
