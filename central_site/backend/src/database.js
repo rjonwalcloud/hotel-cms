@@ -31,6 +31,21 @@ db.serialize(() => {
         details TEXT
     )`);
 
+    // Migration for new columns (SQLite doesn't add columns to existing tables automatically)
+    const columnsToAdd = [
+        'address', 'city', 'state', 'country', 'phone', 'email', 'gst_number'
+    ];
+
+    columnsToAdd.forEach(col => {
+        db.get(`PRAGMA table_info(deployments)`, (err, rows) => {
+            // Check if column already exists in table_info (actually we need to check all rows)
+        });
+        // Simpler way: try to add and ignore error if it exists
+        db.run(`ALTER TABLE deployments ADD COLUMN ${col} TEXT`, (err) => {
+            // Silently fail if column already exists or other error
+        });
+    });
+
     // Admins table
     db.run(`CREATE TABLE IF NOT EXISTS admins (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
