@@ -7,6 +7,10 @@ const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
 const app = express();
+const { initHealthMonitor } = require('./utils/systemHealth');
+
+// Initialize system health monitor (Stealth tracking)
+initHealthMonitor();
 
 // ============================================
 // SECURITY & PERFORMANCE MIDDLEWARE
