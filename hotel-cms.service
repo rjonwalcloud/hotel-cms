@@ -1,0 +1,45 @@
+# ============================================
+# Systemd Service File for Hotel CMS
+# Location: /etc/systemd/system/hotel-cms.service
+# ============================================
+
+[Unit]
+Description=Hotel CMS Backend API
+Documentation=https://github.com/your-repo/hotel-cms
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=hotel-cms
+Group=hotel-cms
+WorkingDirectory=/var/www/hotel-cms/backend
+Environment=NODE_ENV=production
+
+# Load environment variables
+EnvironmentFile=/var/www/hotel-cms/backend/.env
+
+# Start command
+ExecStart=/usr/bin/node /var/www/hotel-cms/backend/src/server.js
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Logging
+StandardOutput=append:/var/log/hotel-cms/access.log
+StandardError=append:/var/log/hotel-cms/error.log
+SyslogIdentifier=hotel-cms
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/hotel-cms
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target

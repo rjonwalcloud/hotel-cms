@@ -1,0 +1,4 @@
+Error: Insufficient availability for room type ID: d3fc154a-fd48-43b2-9a80-a3e6d79d5a69. Required: 2, Remaining: 1
+    at BulkBookingService.createBulkBooking (C:\Users\simple\Downloads\hotel-claude\hotel-cms\hotel-cms\backend\src\modules\booking\services\bulk-booking.service.js:49:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async testBulkBooking (C:\Users\simple\Downloads\hotel-claude\hotel-cms\hotel-cms\backend\test-bulk.js:53:24)
