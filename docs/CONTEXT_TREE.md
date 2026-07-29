@@ -38,8 +38,8 @@ hotel-cms/
 │   │   ├── server.js         # App entry — middleware + route mounting
 │   │   ├── config/
 │   │   │   └── database.js   # PostgreSQL pool + auto-migration (CREATE TABLE IF NOT EXISTS)
-│   │   ├── middleware/       # 4 middleware files
-│   │   ├── modules/          # 18 domain modules (controller/service/route pattern)
+│   │   ├── middleware/       # 5 middleware files
+│   │   ├── modules/          # 23 domain modules (controller/service/route pattern)
 │   │   └── utils/
 │   │       └── dateUtils.js
 │   └── scripts/              # CLI utilities
@@ -84,6 +84,7 @@ hotel-cms/
 | `rbac.middleware.js` | `requirePermission(key)` — checks user's role permissions |
 | `quota.middleware.js` | Enforces hotel-level resource limits (rooms, bookings) |
 | `subscription.middleware.js` | Checks hotel's active subscription status |
+| `errorHandler.js` | Centralized `AppError` class + error handler (operational vs. unexpected errors) |
 
 ### API Route Mounts (`server.js`)
 
@@ -268,7 +269,7 @@ modules/
 
 ### API Service (`frontend/src/services/api.js`)
 
-Single file exporting **15 API client objects**, each with methods mapping to backend endpoints:
+Single file exporting **26 API client objects**, each with methods mapping to backend endpoints:
 
 | Export | Prefix | Backend Module |
 |--------|--------|---------------|
@@ -292,9 +293,12 @@ Single file exporting **15 API client objects**, each with methods mapping to ba
 | `systemAPI` | `/system` | System |
 | `publicAPI` | `/public` | Public |
 | `settingsAPI` | `/settings` | Settings/Tax |
+| `taskAPI` | `/tasks` | Task |
 | `adminUserAPI` | `/users` | IAM/Users |
 | `addonAPI` | `/addons` | Addon |
+| `invoiceAPI` | `/financials` | Invoices |
 | `analyticsAPI` | `/analytics` | Analytics |
+| `creditNoteAPI` | `/credit-notes` | Credit Notes |
 | `lostFoundAPI` | `/lost-found` | Lost & Found |
 
 **Interceptors**: Auto-attaches Bearer token; auto-redirects to `/login` on 401.
@@ -533,6 +537,7 @@ databases:
 - **Auto-migration on boot** — `database.js` runs `CREATE TABLE IF NOT EXISTS` for all tables during startup
 - **Audit logging** — most services call `this.createAuditLog()` after mutations
 - **Quota enforcement** — `quota.middleware.js` checks `usage_counters` before allowing resource creation
+- **Centralized Error Handling** — use `AppError` from `errorHandler.js` for operational errors (4xx). Unexpected errors (5xx) are automatically logged without leaking stack traces.
 - **Detailed History Timelines** — Core flows (Bookings, Tasks, Service Requests) use dedicated history tables (`booking_status_history`, `task_history`, `sr_history`) to track robust status transitions and user attribution, displayed in booking-style vertical timelines on the frontend.
 - **SR-Booking Integration** — Service Requests via QR are gated by room occupancy (`CHECKED_IN` booking required). Each SR stores `booking_id` and `booking_ref`. After checkout, the room's QR SR functionality is disabled until re-booked. `checkOutWithBilling()` blocks if pending/in-progress SRs exist. `COMPLETED` service requests are automatically appended to the checkout invoice with itemized tax breakdowns.
 - **Itemized Invoice Taxes** — The billing engine calculates and displays taxes (GST/VAT) immediately below each relevant line item (Room, Addons, Manual Charges, and Room Service). Supports both Inclusive and Exclusive taxes with clear labeling.
@@ -549,6 +554,7 @@ databases:
 ### Frontend Patterns
 - **Role-based routing** — `App.jsx` uses nested `<ProtectedRoute role="...">` wrappers
 - **Sidebar navigation** — `Sidebar.jsx` renders different menu items based on user role
+- **React Hooks Rules** — hooks like `useEffect` must not be called inside conditional statements to prevent React state corruption
 - **API error handling** — axios interceptor catches 401 → auto-logout; components catch specific errors
 - **Currency context** — `currencyStore.js` caches hotel currency for formatting
 - **`Promise.all` data loading** — most pages load multiple APIs concurrently on mount

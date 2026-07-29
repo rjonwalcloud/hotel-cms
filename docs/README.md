@@ -581,7 +581,9 @@ hotel-claude/
 │   │   ├── middleware/
 │   │   │   ├── auth.middleware.js        # JWT authentication
 │   │   │   ├── rbac.middleware.js        # Role-based access control
-│   │   │   └── quota.middleware.js       # Resource quota enforcement
+│   │   │   ├── quota.middleware.js       # Resource quota enforcement
+│   │   │   ├── subscription.middleware.js # Active subscription checks
+│   │   │   └── errorHandler.js          # Centralized error handling & AppError class
 │   │   ├── modules/
 │   │   │   ├── iam/                      # Identity & Access Management
 │   │   │   │   ├── controllers/
@@ -596,7 +598,20 @@ hotel-claude/
 │   │   │   ├── audit/                    # Audit logging
 │   │   │   ├── qrcode/                   # QR code generation & scanning
 │   │   │   ├── subscription/             # Subscription plans & management
-│   │   │   └── booking-manager/          # External booking channels
+│   │   │   ├── booking-manager/          # External booking channels
+│   │   │   ├── rate/                     # Rate plans & pricing
+│   │   │   ├── promotion/                # Promotions & coupons
+│   │   │   ├── addon/                    # Room addons
+│   │   │   ├── task/                     # Task management
+│   │   │   ├── analytics/                # Hotel analytics
+│   │   │   ├── settings/                 # Hotel settings & taxes
+│   │   │   ├── amenities/                # Hotel amenities
+│   │   │   ├── inventory/                # Room inventory calendar
+│   │   │   ├── item-inventory/           # Physical supplies & stock
+│   │   │   ├── credit-note/              # Credit note management
+│   │   │   ├── lost-found/               # Lost & found items
+│   │   │   ├── system/                   # System backup & config
+│   │   │   └── public/                   # Unauthenticated endpoints
 │   │   └── server.js                     # Express app entry point
 │   ├── scripts/                          # Migration & seeding scripts
 │   ├── package.json
@@ -682,12 +697,15 @@ hotel-claude/
 - **JWT Authentication** with 7-day token expiration
 - **bcrypt** password hashing (10 salt rounds)
 - **Helmet.js** security headers (CSP in production)
-- **CORS** with configurable origin
+- **CORS** with environment-based origin restriction (`CORS_ORIGIN` in production, permissive in development)
 - **Rate Limiting** (100 req/15min per IP)
 - **Parameterized SQL queries** (no raw string interpolation)
 - **Immutable audit logs** (DB triggers prevent modification)
 - **RBAC** with granular permission checks on every endpoint
 - **Input validation** via Joi schemas
+- **Centralized error handling** — operational errors (4xx) vs unexpected errors (5xx) with stack trace stripping in production
+- **Graceful shutdown** with forced exit timeout to prevent zombie processes
+- **Unhandled rejection/exception handlers** to catch silent crashes
 
 ---
 
