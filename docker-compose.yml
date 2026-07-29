@@ -35,7 +35,7 @@ services:
       DB_NAME: hotel_cms
       DB_USER: postgres
       DB_PASSWORD: postgres
-      JWT_SECRET: q8K7v9pT4zL2mW1xY0bR5nH6sF3dJ8uE
+      JWT_SECRET: ${JWT_SECRET:-change-this-secret-in-production}
       PORT: 5000
       FRONTEND_URL: http://localhost:3000
     depends_on:

@@ -9,7 +9,7 @@ require('dotenv').config();
 const app = express();
 const { initHealthMonitor } = require('./utils/systemHealth');
 
-// Initialize system health monitor (Stealth tracking)
+// Initialize system health monitor
 initHealthMonitor();
 
 // ============================================
@@ -23,8 +23,11 @@ app.use(helmet({
 }));
 
 // CORS
+const corsOrigin = process.env.CORS_ORIGIN;
 const corsOptions = {
-  origin: true, // Reflect request origin (useful for multi-domain debugging)
+  origin: process.env.NODE_ENV === 'production' && corsOrigin
+    ? corsOrigin.split(',').map(o => o.trim())
+    : true,
   credentials: true,
   optionsSuccessStatus: 200
 };
@@ -127,11 +130,20 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Not Found' });
 });
 
-// Error handler
+// Centralized error handler
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
-  res.status(err.status || 500).json({
-    error: err.message || 'Internal Server Error',
+  // Distinguish operational errors from programming errors
+  const statusCode = err.status || err.statusCode || 500;
+  const isOperational = statusCode < 500;
+
+  if (!isOperational) {
+    console.error('Unexpected Error:', err);
+  } else if (process.env.NODE_ENV === 'development') {
+    console.error('Operational Error:', err.message);
+  }
+
+  res.status(statusCode).json({
+    error: isOperational ? err.message : 'Internal Server Error',
     ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
   });
 });
@@ -154,30 +166,41 @@ const server = app.listen(PORT, () => {
   `);
 });
 
-// Graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('SIGTERM signal received: closing HTTP server');
+// Graceful shutdown helper
+const SHUTDOWN_TIMEOUT_MS = 10000; // Force exit after 10s
+
+function gracefulShutdown(signal) {
+  console.log(`${signal} received: closing HTTP server`);
+
+  // Force exit if graceful shutdown takes too long
+  const forceExit = setTimeout(() => {
+    console.error('Graceful shutdown timed out, forcing exit');
+    process.exit(1);
+  }, SHUTDOWN_TIMEOUT_MS);
+  forceExit.unref();
+
   server.close(() => {
     console.log('HTTP server closed');
-    // Close database connections
     const db = require('./config/database');
     db.pool.end(() => {
       console.log('Database pool closed');
+      clearTimeout(forceExit);
       process.exit(0);
     });
   });
+}
+
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.on('SIGINT', () => gracefulShutdown('SIGINT'));
+
+// Catch unhandled errors to prevent silent crashes
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });
 
-process.on('SIGINT', () => {
-  console.log('SIGINT signal received: closing HTTP server');
-  server.close(() => {
-    console.log('HTTP server closed');
-    const db = require('./config/database');
-    db.pool.end(() => {
-      console.log('Database pool closed');
-      process.exit(0);
-    });
-  });
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
+  gracefulShutdown('uncaughtException');
 });
 
 module.exports = app;

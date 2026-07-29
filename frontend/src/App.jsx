@@ -146,7 +146,6 @@ function App() {
             <Route path="pos" element={<RestaurantPOS />} />
             <Route path="breakage-report" element={<StaffBreakageReport />} />
             <Route path="invoices" element={<InvoiceManagement />} />
-            <Route path="invoices" element={<InvoiceManagement />} />
             <Route path="lost-found" element={<LostFound />} />
             <Route path="support" element={<Support />} />
           </Route>
@@ -182,10 +181,9 @@ function RoleDashboard() {
   if (role === 'HOTEL_ADMIN' || role === 'ADMIN') return <Navigate to="/hotel/dashboard" replace />;
   if (role === 'STAFF') return <Navigate to="/staff/dashboard" replace />;
 
+  // No valid role — log the user out (synchronous Zustand action, safe outside useEffect)
   if (user.roles?.length === 0 && !user.hotel_id) {
-    useEffect(() => {
-      logout();
-    }, [logout]);
+    logout();
     return <Navigate to="/login" replace />;
   }
 
