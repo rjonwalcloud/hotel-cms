@@ -24,6 +24,8 @@ A full-stack, multi-tenant SaaS platform for hotel management built with **Node.
   - [VPS / Linux Server](#vps--linux-server)
 - [Default Credentials](#default-credentials)
 - [Project Structure](#project-structure)
+- [License](#license)
+- [Disclaimer](#disclaimer)
 
 ---
 
@@ -711,4 +713,38 @@ hotel-cms/
 
 ## License
 
-MIT
+This project is licensed under the **Apache License 2.0** — see the [LICENSE](file:///Users/dev/hotel-cms/LICENSE) file for details.
+
+```
+Copyright 2026 RjonWalCloud
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+```
+
+You are free to use, modify, and distribute this software, provided that:
+- The original copyright notice and license are retained
+- Changes are clearly marked
+- The `NOTICE` file (if present) is included in redistributions
+
+---
+
+## Disclaimer
+
+> **⚠️ USE AT YOUR OWN RISK**
+>
+> This software is provided **"AS IS"**, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement.
+>
+> In no event shall the authors or copyright holders (**RjonWalCloud**) be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+>
+> **Before deploying to production**, you are solely responsible for:
+> - Conducting your own security audit
+> - Changing all default credentials
+> - Configuring proper environment variables
+> - Ensuring compliance with local data protection regulations (GDPR, etc.)
+> - Performing adequate testing for your specific use case
+>
+> The authors assume **no responsibility** for data loss, security breaches, or any damages resulting from the use of this software.
