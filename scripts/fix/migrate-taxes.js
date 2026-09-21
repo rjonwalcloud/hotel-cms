@@ -1,4 +1,4 @@
-const db = require('./backend/src/config/database');
+const db = require('../../backend/src/config/database');
 
 async function dropConstraint() {
     try {
