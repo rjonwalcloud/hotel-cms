@@ -3,8 +3,6 @@
 
 A full-stack, multi-tenant SaaS platform for hotel management built with **Node.js/Express**, **React**, and **PostgreSQL**. Supports multiple hotels, role-based access control, QR code room services, external booking channel integration, subscription management, and audit logging.
 
----demo2
-
 ## Table of Contents
 
 - [Features](#features)
@@ -716,7 +714,7 @@ hotel-cms/
 This project is licensed under the **Apache License 2.0** — see the [LICENSE](file:///Users/dev/hotel-cms/LICENSE) file for details.
 
 ```
-Copyright 2026 RjonWalCloud
+Copyright 2026 rjonwalcloud
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -738,7 +736,7 @@ You are free to use, modify, and distribute this software, provided that:
 >
 > This software is provided **"AS IS"**, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement.
 >
-> In no event shall the authors or copyright holders (**RjonWalCloud**) be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+> In no event shall the authors or copyright holders (**rjonwalcloud**) be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
 >
 > **Before deploying to production**, you are solely responsible for:
 > - Conducting your own security audit
