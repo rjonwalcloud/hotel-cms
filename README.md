@@ -754,14 +754,17 @@ You are free to use, modify, and distribute this software, provided that:
 
 ## Disclaimer
 
+> **🤖 This project was built with the assistance of AI.**
+>
 > **⚠️ USE AT YOUR OWN RISK**
 >
 > This software is provided **"AS IS"**, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement.
 >
 > In no event shall the authors or copyright holders (**rjonwalcloud**) be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
 >
-> **Before deploying to production**, you are solely responsible for:
-> - Conducting your own security audit
+> **⚠️ Make sure to audit the code before moving to production.** You are solely responsible for:
+> - Conducting a thorough **security audit** of the entire codebase
+> - Reviewing all AI-generated code for correctness and edge cases
 > - Changing all default credentials
 > - Configuring proper environment variables
 > - Ensuring compliance with local data protection regulations (GDPR, etc.)
